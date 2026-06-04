@@ -161,4 +161,3 @@ saml.request.requestId.cache.time.sec: 120 #2min
 saml.request.redirection.url: https://mylogin.airtel.africa/am/SSORedirect/metaAlias/airtel/aafidpl1?SAMLRequest={uriEncode}
 azure.ad.tenant-id: "${AZURE_TENANT_ID}"
 saml.request.issuer.url: https://admin-portal-csg-aaa-app.apps.prod02.ng.airtel.ocp/srh
-cookie.max-age.sec: 604800

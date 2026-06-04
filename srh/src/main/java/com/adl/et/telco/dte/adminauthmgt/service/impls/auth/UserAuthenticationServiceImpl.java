@@ -84,14 +84,12 @@ public class UserAuthenticationServiceImpl implements UserAuthenticationService 
                 throw new BaseException(AuthCodeEnum.INVALID_RV_TOKEN.description(), AuthCodeEnum.INVALID_RV_TOKEN.description(), HttpStatus.FORBIDDEN, AuthCodeEnum.INVALID_RV_TOKEN.code(), null);
             }
             if (cacheRepository.existsByUserId(userId)) {
-                logger.warn("Login rejected - active session exists for userId: {}", userId);
-                throw new BaseException(
-                        AuthCodeEnum.USER_ALREADY_LOGGED_IN.description(),
-                        AuthCodeEnum.USER_ALREADY_LOGGED_IN.description(),
-                        HttpStatus.CONFLICT,
-                        AuthCodeEnum.USER_ALREADY_LOGGED_IN.code(),
-                        null
-                );
+                // Last-login-wins: a session already exists for this user (possibly on another device or
+                // browser). Take it over instead of rejecting. The new verification token saved below
+                // overwrites the previous one, so the previous session's rv_token cookie no longer matches
+                // and that device is rejected by JwtRequestFilter on its next request - i.e. it is
+                // automatically logged out.
+                logger.info("Existing session found for userId: {} - taking over and invalidating the previous session", userId);
             }
 
             Map<String, String> accessTokenMap = createAccessToken(jwtToken);

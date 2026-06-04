@@ -157,6 +157,5 @@ saml.request.redirection.url: https://login.microsoftonline.com/{tenantId}/saml2
 azure.ad.tenant-id: "${AZURE_TENANT_ID}"
 #saml.request.issuer.url: https://ingressdev.helloallworld.work.gd/airtel-aaa-aaa-secure-request-handler/srh
 saml.request.issuer.url: api://54e10f2b-e50a-40d4-b152-04915cbd7b4d/airtel-aaa-aaa-secure-request-handler/srh
-cookie.max-age.sec: 604800
 
 
