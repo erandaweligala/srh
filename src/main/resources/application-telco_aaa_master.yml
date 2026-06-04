@@ -1,0 +1,164 @@
+server:
+  port: 31478
+  http:
+    port: 31478
+  server-header: ""
+  error:
+    include-stacktrace: never
+    include-message: never
+    include-exception: false
+    include-binding-errors: never
+log:
+  identifierKey: UUID
+  isDebug: true
+info:
+  app:
+    name: admin-services
+    msName: admin-services-secure-request-handler
+com:
+  adl:
+    dte:
+      plugins:
+        logging:
+          enabled: false
+          level: DEBUG
+        rolling:
+          policy: time
+        alarming:
+          enabled: false
+        msstat:
+          enabled: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus
+      # Change the actuator base path (obscurity layer)
+      base-path: /internal/monitor
+  endpoint:
+    health:
+      show-details: never        # Don't expose DB, Redis, disk details
+    env:
+      enabled: false             # Disable - exposes secrets
+    beans:
+      enabled: false             # Disable - exposes internal structure
+    configprops:
+      enabled: false             # Disable - exposes config/secrets
+    heapdump:
+      enabled: false             # Disable - exposes memory contents
+    threaddump:
+      enabled: false             # Disable
+    mappings:
+      enabled: false             # Disable - exposes all API routes
+    loggers:
+      enabled: false
+
+excel.read.col.index: 0
+
+jasypt:
+  encryptor:
+    password: adminPanel
+
+rest-template:
+  connection-time-out: 60000
+  read-time-out: 60000
+
+spring:
+  sleuth:
+    sampler:
+      probability: 1.0
+    web:
+      skip-pattern: (^cleanup.*|.+favicon.*)
+  data:
+    redis:
+      client-type: lettuce
+      password: "${REDIS_PASSWORD}"
+      timeout: 120000ms
+      sentinel:
+        master: "${REDIS_MASTER_NAME}"
+        nodes:
+          - redis-cluster-headless.cluster-redis.svc.cluster.local:26379
+        password: "${REDIS_SENTINEL_PASSWORD}"
+      lettuce:
+      pool:
+        max-active: 600
+        max-wait: 3000ms
+        max-idle: 200
+        min-idle: 10
+      shutdown-timeout: 240000ms
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+  servlet.multipart:
+    max-file-size: 2MB
+    max-request-size: 2MB
+  datasource:
+    url: jdbc:mysql://mysql.elasti.svc.cluster.local:3306/adauth?createDatabaseIfNotExist=true&serverTimezone=UTC
+#    url: jdbc:mysql://localhost:3306/adauth?createDatabaseIfNotExist=true&serverTimezone=UTC
+    username: "${DB_MYSQL_USER}"
+    password: "${DB_MYSQL_PASSWORD}"
+    maxActive: 20
+    maxIdle: 10
+    maxWait: 5000
+    driverClassName: com.mysql.cj.jdbc.Driver
+  jpa:
+    generate-ddl: "true"
+    show-sql: "false"
+    hibernate.ddlH-auto: update
+
+ums:
+  user:
+    expired-in-days: 90
+    status:
+      meta-data: http://airtel-aaa-airtel-aaa-ums-service.csg-aaa-app.svc.cluster.local:8085/ums/user/status/meta-data
+    base-resource-url: http://airtel-aaa-airtel-aaa-ums-service.csg-aaa-app.svc.cluster.local:8085/ums/user
+    validate-email: http://airtel-aaa-airtel-aaa-ums-service.csg-aaa-app.svc.cluster.local:8085/ums/user/validate
+    get-filtered-user-url: http://airtel-aaa-airtel-aaa-ums-service.csg-aaa-app.svc.cluster.local:8085/ums/user/user-list
+  get-basic-info-for-token:
+    url: http://airtel-aaa-airtel-aaa-ums-service.csg-aaa-app.svc.cluster.local:8085/ums/auth-user/basic-info/{userName}
+  get-user-details-for-username:
+    url: http://airtel-aaa-airtel-aaa-ums-service.csg-aaa-app.svc.cluster.local:8085/ums/auth-user/external/user/{userName}
+  permission:
+    base-resource-url: http://airtel-aaa-airtel-aaa-ums-service.csg-aaa-app.svc.cluster.local:8085/ums/permission
+  role:
+    base-resource-url: http://airtel-aaa-airtel-aaa-ums-service.csg-aaa-app.svc.cluster.local:8085/ums/role
+    meta-data-url: http://airtel-aaa-airtel-aaa-ums-service.csg-aaa-app.svc.cluster.local:8085/ums/role/meta-data
+    filtered-url: http://airtel-aaa-airtel-aaa-ums-service.csg-aaa-app.svc.cluster.local:8085/ums/role/role-list
+  inactive:
+    days: 90
+  get-user-details-for-email:
+    url:  http://airtel-aaa-airtel-aaa-ums-service.csg-aaa-app.svc.cluster.local:8085/ums/user/get-details-by-email/{email}
+  action-log-url: http://airtel-aaa-airtel-aaa-ums-service.csg-aaa-app.svc.cluster.local:8085/ums/user-activity-log/create-log
+  update-action-log-url: http://airtel-aaa-airtel-aaa-ums-service.csg-aaa-app.svc.cluster.local:8085/ums/user-activity-log/update-log
+  get-username-url: http://airtel-aaa-airtel-aaa-ums-service.csg-aaa-app.svc.cluster.local:8085/ums/auth-user/get-username
+
+tenant-id: 1
+cors:
+  allowed-origins: https://admin-portal-csg-aaa-app.apps.prod02.ng.airtel.ocp
+
+#############Access Management Config###################################################################
+assisted-channel.secret-key: "${SECRET_KEY}"
+access.token-expire-time-millsec: 1800000
+#refresh should done before #s before token exp time
+jwt.refresh.time.range.sec: 300
+#Time where access token remains in redis
+jwt.idle.time.range.sec: 1200
+#TTL of temp token
+temp.token.ttl.sec: 600
+prefix.ac: ADMIN_LOGGEDUSER_inventory_DEV_
+prefix.temp: ADMIN_TEMPTOKEN_inventory_DEV_
+
+base-url:
+  context: /
+
+################## SAML responses #########################################################################
+login.success.url: https://admin-portal-csg-aaa-app.apps.prod02.ng.airtel.ocp/airtel-aaa-admin-frontend/internal/success/
+login.fail.url: https://admin-portal-csg-aaa-app.apps.prod02.ng.airtel.ocp/airtel-aaa-admin-frontend/internal/error/
+login.revoked.url: https://admin-portal-csg-aaa-app.apps.prod02.ng.airtel.ocp/airtel-aaa-admin-frontend/internal/access-revoked/
+saml.public-key-certificate.path: forgerock-aafidpl1-signing.cer
+
+saml.request.requestId.cache.time.sec: 120 #2min
+saml.request.redirection.url: https://mylogin.airtel.africa/am/SSORedirect/metaAlias/airtel/aafidpl1?SAMLRequest={uriEncode}
+azure.ad.tenant-id: "${AZURE_TENANT_ID}"
+saml.request.issuer.url: https://admin-portal-csg-aaa-app.apps.prod02.ng.airtel.ocp/srh
+cookie.max-age.sec: 604800
