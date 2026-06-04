@@ -36,13 +36,16 @@ public class CacheRepository implements RedisRepository {
 
     @Override
     public void save(String key, String value, Long expiryTimeInSec) {
-        String resolvedKey = buildKey(key);
-        redisTemplate.opsForValue().set(resolvedKey, value, expiryTimeInSec, TimeUnit.SECONDS); // atomic set+expire
+        // Callers pass a fully-prefixed key (prefixAC + userId or tempTokenPrefix + userId),
+        // so store it raw - matching existsByKey/deleteKey. Do NOT force prefixAC here, or
+        // temp-token keys get double-prefixed and can never be read back (Invalid Temp Token).
+        redisTemplate.opsForValue().set(key, value, expiryTimeInSec, TimeUnit.SECONDS); // atomic set+expire
     }
 
     @Override
     public String findByKey(String key) {
-        return redisTemplate.opsForValue().get(buildKey(key));
+        // Raw key - callers already include the appropriate prefix (see save()).
+        return redisTemplate.opsForValue().get(key);
     }
 
     @Override
