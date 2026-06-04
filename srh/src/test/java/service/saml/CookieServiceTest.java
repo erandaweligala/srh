@@ -15,9 +15,6 @@ class CookieServiceTest {
     @BeforeEach
     void setUp(){
         cookieService = new CookieService();
-        // use reflection or a setter to set the value of cookieMaxAge
-        setCookieMaxAge(cookieService,3600);
-
     }
 
     @Test
@@ -32,23 +29,13 @@ class CookieServiceTest {
         assertNotNull(result);
         assertEquals("rv_token", result.getName());
         assertEquals(cookieValue, result.getValue());
-        assertEquals(3600, result.getMaxAge());
+        // Session cookie: max age must be -1 so the browser discards it when it is closed,
+        // forcing the user to log in again on the next browser launch.
+        assertEquals(-1, result.getMaxAge());
         assertTrue(result.isHttpOnly());
         assertEquals("/", result.getPath());
 
 
-    }
-
-
-
-    private void setCookieMaxAge(CookieService service, int maxAge){
-        try{
-            java.lang.reflect.Field field = CookieService.class.getDeclaredField("cookieMaxAge");
-            field.setAccessible(true);
-            field.set(service,maxAge);
-        }catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException e){
-            throw new RuntimeException("Failed to set cookieMaxAge via reflection", e);
-        }
     }
 
 }
