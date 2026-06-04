@@ -1,0 +1,25 @@
+
+.common-confirm-modal {
+
+  .ant-modal .ant-modal-title {
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-medium);
+  }
+
+  .ant-divider-horizontal {
+    margin: 12px 0;
+  }
+
+  .ant-modal .ant-modal-close-x {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  .danger {
+    background-color: #D66868;
+    &:hover {
+      background-color: #D66868;
+    }
+  }
+
+}

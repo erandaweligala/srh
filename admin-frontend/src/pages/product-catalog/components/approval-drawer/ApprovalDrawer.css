@@ -1,0 +1,88 @@
+.approval-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Row */
+.approval-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+}
+
+/* Vertical gap between rows */
+.approval-row:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+/* ---------- Minus Box ---------- */
+.minus-box {
+    width: 16px;
+    height: 16px;
+    background: #FFFFFF;
+    border: 1px solid #E8E8E8;
+    border-radius: 2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+    line-height: 1;
+    cursor: pointer;
+    flex-shrink: 0;
+    position: relative;
+}
+
+/* Dashed connector for minus box */
+.minus-box::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: calc(100% + 32px);
+    border-left: 1px dashed #C6C6C6;
+}
+
+/* Hide dashed line on last row */
+.approval-row:last-child .minus-box::after {
+    display: none;
+}
+
+
+/* ---------- Label Box ---------- */
+.approval-label-box {
+    width: 236px;
+    min-height: 32px;
+    background: #FFFFFF;
+    border: 1px solid #C6C6C6;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 500;
+    flex-shrink: 0;
+    position: relative;
+}
+
+/* Solid connector for label box */
+.approval-label-box::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    border-left: 1px solid #C6C6C6;
+}
+
+/* Hide solid line on last row */
+.approval-row:last-child .approval-label-box::after {
+    display: none;
+}
+

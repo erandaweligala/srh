@@ -1,0 +1,105 @@
+@import "./styles/Variables.css";
+@import "./styles/LoadingSpinner.css";
+
+html {
+    background-color: var(--secondary-background-color);
+}
+
+body {
+    cursor: default;
+    height: auto;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.default-border {
+    border: var(--primary-border);
+}
+
+.svg-edit-button {
+    &:hover {
+        cursor: pointer;
+        scale: 1.2;
+    }
+}
+
+.svg-delete-button {
+    width: 20px;
+    height: 20px;
+    margin-bottom: -5px;
+
+    &:hover {
+        cursor: pointer;
+        scale: 1.2;
+    }
+}
+
+.page-body {
+    position: fixed;
+    top: 94px;
+    overflow: auto;
+    width: 100%;
+    height: calc(100vh - 94px);
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 12px;
+}
+
+/* CSS Class for Breadcrumb right component */
+.breadcrumb-right-content {
+    margin-right: 35px;
+}
+
+/* Description Issue Fixing */
+.ant-descriptions.ant-descriptions-bordered .ant-descriptions-item-content,
+.ant-descriptions.ant-descriptions-bordered .ant-descriptions-item-label,
+.ant-descriptions.ant-descriptions-bordered > .ant-descriptions-view .ant-descriptions-row > .ant-descriptions-item-label,
+.ant-descriptions.ant-descriptions-bordered > .ant-descriptions-view .ant-descriptions-row > .ant-descriptions-item-content {
+    padding: 9px 16px;
+}
+
+.ant-menu-light .ant-menu-item,
+.ant-menu-light > .ant-menu .ant-menu-item,
+.ant-menu-light .ant-menu-submenu-title,
+.ant-menu-light > .ant-menu .ant-menu-submenu-title {
+    color: white;
+}
+
+/* Tree Node Overwrite
+Enterprice SalfCare Page */
+
+.ant-tree {
+    font-size: 12px;
+    color: black;
+}
+
+.ant-tree .ant-tree-treenode {
+    width: 100%;
+}
+
+.ant-tree .ant-tree-node-content-wrapper {
+    flex: 1 0 auto;
+}
+
+.ant-tree .ant-tree-node-content-wrapper.ant-tree-node-selected,
+.ant-tree .ant-tree-checkbox + span.ant-tree-node-selected {
+    background-color: #1E6059;
+    color: white;
+}
+
+.ant-tree .ant-tree-treenode-selected .ant-tree-indent {
+    background: #1E6059;
+}
+
+.ant-tree .ant-tree-treenode-selected .ant-tree-switcher-noop {
+    background: #1E6059;
+}
+
+.ant-tree .ant-tree-node-content-wrapper,
+.ant-tree .ant-tree-checkbox + span {
+    border-radius: 0;
+}
+
+.common-container {
+    padding: 16px 50px;
+}

@@ -1,0 +1,154 @@
+/* Main Template Page Styles */
+.notification-search-container {
+    margin-top: 0px !important;
+}
+
+.notification-action-bar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.add-template-btn {
+    font-size: 12px !important;
+}
+
+/* Drawer Component Styles */
+.drawer-title-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.notification-form-wrapper {
+    font-size: 13px;
+}
+
+/* Common Card Styles */
+.notification-card-section {
+    margin-top: 16px !important;
+}
+
+.notification-card-section .ant-card-head {
+    background-color: #fafafa;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.notification-card-section .ant-card-body {
+    padding: 10px;
+}
+
+/* Sub-template Item Styles */
+.template-item-box {
+    border: 1px solid #fafafa;
+    padding: 10px;
+    position: relative;
+}
+
+.delete-item-icon {
+    color: #aaaaaa;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.item-row-flex {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.stretch-item {
+    margin-bottom: 0 !important;
+    flex: 1;
+}
+
+/* Message Content Section */
+.message-content-section {
+    margin-top: 16px !important;
+}
+
+.message-content-section .ant-card-head {
+    background-color: #fafafa;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.message-content-section .ant-card-body {
+    padding: 16px;
+}
+
+.dynamic-params-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.dynamic-params-label {
+    font-weight: 500;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+.dynamic-params-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.param-select-dropdown {
+    width: 150px;
+}
+
+.insert-inline-btn {
+    background-color: #0050b3 !important;
+    font-size: 12px !important;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0 !important;
+}
+
+.submit-btn-primary {
+    background-color: #0050b3 !important;
+}
+
+/* View Component Styles */
+.view-notification-page {
+    margin-top: 16px !important;
+}
+
+.view-section-card {
+    flex: 1;
+    border-radius: 0 !important;
+}
+
+.view-section-card .ant-card-head {
+    background: #f5f5f5;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 6px 16px;
+    min-height: auto;
+    border-radius: 0 !important;
+}
+
+.view-detail-descriptions .ant-descriptions-item-label {
+    width: 180px;
+    font-weight: 500;
+    background-color: #f5f5f5 !important;
+    white-space: nowrap;
+    color: #000;
+}
+
+.view-detail-descriptions .ant-descriptions-item-content {
+    padding-left: 16px;
+    color: #000;
+}
+
+.view-notification-page .common-status-tag {
+    justify-content: flex-start !important;
+}

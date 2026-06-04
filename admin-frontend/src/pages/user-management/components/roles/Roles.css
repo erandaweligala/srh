@@ -1,0 +1,8 @@
+.scrollable-table .ant-table-body {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+}
+
+.scrollable-table .ant-table-body::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}

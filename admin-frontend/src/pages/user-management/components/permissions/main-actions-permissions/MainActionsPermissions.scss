@@ -1,0 +1,29 @@
+.main-action-permissions {
+  .box-container {
+    border: 1px solid #F2F2F2;
+  }
+  .box-header {
+    background: #F8F9FA;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    //border-bottom: 1px solid #F2F2F2;
+    padding-left: 8px;
+  }
+  .box-sub-header {
+    background: #F8F9FA;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    //border-top: 1px solid #F2F2F2;
+    padding-left: 32px;
+  }
+  .box-nest-sub-header{
+    background: #F8F9FA;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    //border-top: 1px solid #F2F2F2;
+    padding-left: 57px;
+  }
+}

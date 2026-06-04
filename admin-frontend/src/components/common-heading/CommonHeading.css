@@ -1,0 +1,15 @@
+
+.heading{
+    color: var(--primary-font-color);  
+    
+}
+
+.SMALL{
+    font-size: 16px;
+}
+.MEDIUM{
+    font-size: 20px;
+}
+.LARGE{
+    font-size: 28px;
+}

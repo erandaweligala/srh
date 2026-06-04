@@ -1,0 +1,24 @@
+
+.common-square-button {
+
+  .ant-btn {
+    font-size: var(--font-size-md);
+    height: 24px;
+    width: 24px;
+    padding: 0;
+    border-radius: var(--border-radius);
+    border-color: var(--primary-border-color);
+    background-color: #FFFFFF29;
+  }
+
+  .ant-btn-default:not(:disabled):hover {
+    color: transparent;
+    border-color: transparent;
+  }
+
+  .icon {
+    height: 12px;
+    width: 12px;
+  }
+
+}

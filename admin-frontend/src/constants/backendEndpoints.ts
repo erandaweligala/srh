@@ -1,0 +1,227 @@
+const API_ENDPOINTS = {
+
+    API_VERSION: "/api/v1.0",
+
+    GET_AD_LOGIN_URL: "/airtel-aaa-aaa-secure-request-handler/srh/auth/azure-ad-auth/saml2-request",
+    GET_ACCESS_TOKEN_FROM_TEMP_TOKEN: "/airtel-aaa-aaa-secure-request-handler/srh/auth/user/login",
+    GET_NEW_ACCESS_TOKEN_FROM_CURRENT_ACCESS_TOKEN: "/airtel-aaa-aaa-secure-request-handler/srh/auth/user/new-access-token",
+    LOGOUT: "/airtel-aaa-aaa-secure-request-handler/srh/auth/user/logout",
+    GET_TEMP_TOKEN: "/external-user/authenticate/create-temp-token",
+    GET_ACCESS_TOKEN: "/external-user/authenticate/create-access-token",
+    //home
+    HOME: "/home/ticket-summary",
+
+
+    // GET_QUOTA_PERCENTAGES: "/airtel-aaa-user-provisioning-service/api/notification-templates/quota-percentages",
+
+    // ---ADDED SRH---
+    // SUBSCRIBER - NO SRH
+    // GET_USER_LIST: "/airtel-aaa-user-provisioning-service/api/user",
+    // CREATE_SUBSCRIBER: "/airtel-aaa-user-provisioning-service/api/user",
+    // UPDATE_SUBSCRIBER: "/airtel-aaa-user-provisioning-service/api/user",
+    // DELETE_SUBSCRIBER:  "/airtel-aaa-user-provisioning-service/api/user",
+    // SUBSCRIBER - SRH
+    GET_USER_LIST: "/airtel-aaa-aaa-secure-request-handler/api/subscriber/search-subscriber",
+    CREATE_SUBSCRIBER: "/airtel-aaa-aaa-secure-request-handler/api/subscriber/create-subscriber",
+    UPDATE_SUBSCRIBER: "/airtel-aaa-aaa-secure-request-handler/api/subscriber/update-subscriber",
+    DELETE_SUBSCRIBER: "/airtel-aaa-aaa-secure-request-handler/api/subscriber/delete-subscriber",
+
+    // GET_ACTION_INFO: "/airtel-aaa-user-provisioning-service/api/logs/action-logs",
+    // GET_MESSAGE_LOGS: "/airtel-aaa-user-provisioning-service/api/logs/action-logs",
+    // GET_ERROR_LOGS: "/airtel-aaa-user-provisioning-service/api/logs/action-logs",
+    GET_ACTION_INFO: "/airtel-aaa-aaa-secure-request-handler/api/action-info/search",
+    GET_MESSAGE_LOGS: "/airtel-aaa-aaa-secure-request-handler/api/message-logs/search",
+    GET_ERROR_LOGS: "/airtel-aaa-aaa-secure-request-handler/api/error-logs/search",
+
+    // GET_SERVICE_INFO: "/airtel-aaa-user-provisioning-service/api/services/service-info/filter",
+    // GET_SERVICE_INFO_DETAIL: "/airtel-aaa-user-provisioning-service/api/services/bucket-info",
+    // CREATE_NEW_SERVICE: "/airtel-aaa-user-provisioning-service/api/services/activate",
+    // UPDATE_SERVICE: "/airtel-aaa-user-provisioning-service/api/user/services",
+    // DELETE_SERVICE: "/airtel-aaa-user-provisioning-service/api/user/services",
+    GET_SERVICE_INFO: "/airtel-aaa-aaa-secure-request-handler/api/service-info/search",
+    GET_SERVICE_INFO_DETAIL: "/airtel-aaa-aaa-secure-request-handler/api/service-info/get-bucket-info",
+    CREATE_NEW_SERVICE: "/airtel-aaa-aaa-secure-request-handler/api/service-info/add-new-service",
+    UPDATE_SERVICE: "/airtel-aaa-aaa-secure-request-handler/api/service-info/update-service",
+    DELETE_SERVICE: "/airtel-aaa-aaa-secure-request-handler/api/service-info/delete-service",
+
+    // GET_PLANS: "/airtel-aaa-product-catalog-management/api/plans/filter",
+    // GET_PRODUCT_DETAILS: "/airtel-aaa-product-catalog-management/api/plans",
+    // CREATE_NEW_PLAN: "/airtel-aaa-product-catalog-management/api/plans",
+    // EDIT_NEW_PLAN: "/airtel-aaa-product-catalog-management/api/plans",
+    // DELETE_NEW_PLAN: "/airtel-aaa-product-catalog-management/api/plans",
+    GET_PLANS: "/airtel-aaa-aaa-secure-request-handler/api/product-catalog/search",
+    GET_PRODUCT_DETAILS: "/airtel-aaa-aaa-secure-request-handler/api/product-catalog/get-plan",
+    CREATE_NEW_PLAN: "/airtel-aaa-aaa-secure-request-handler/api/product-catalog/create-plan",
+    EDIT_NEW_PLAN: "/airtel-aaa-aaa-secure-request-handler/api/product-catalog/update-plan",
+    DELETE_NEW_PLAN: "/airtel-aaa-aaa-secure-request-handler/api/product-catalog/delete-plan",
+
+    // GET_BUCKET_DETAILS: "/airtel-aaa-product-catalog-management/api/buckets/view-bucket",
+    // GET_QOS_PROFILE_BY_ID: "/airtel-aaa-product-catalog-management/api/qos-profiles",
+    // GET_PLANS_LIST: "/airtel-aaa-product-catalog-management/api/plans/list",
+    GET_BUCKET_DETAILS: "/airtel-aaa-aaa-secure-request-handler/api/product-catalog/get-bucket-info",
+    GET_QOS_PROFILE_BY_ID: "/airtel-aaa-aaa-secure-request-handler/api/product-catalog/get-qos-profile",
+    GET_PLANS_LIST: "/airtel-aaa-aaa-secure-request-handler/api/product-catalog/get-plan-list",
+
+    // REPORT_REQUEST_SUBSCRIBERS: "/airtel-aaa-aaa-reports-management-service/api/report-download/create",
+    // REPORT_REQUEST_PRODUCTS: "/airtel-aaa-aaa-reports-management-service/api/report-download/create",
+    // REPORT_REQUEST_MESSAGE: "/airtel-aaa-aaa-reports-management-service/api/report-download/create",
+    // REPORT_REQUEST_SESSION: "/airtel-aaa-aaa-reports-management-service/api/report-download/create",
+    // REPORT_REQUEST_AUDIT_LOGS: "/airtel-aaa-aaa-reports-management-service/api/report-download/create",
+    REPORT_REQUEST_SUBSCRIBERS: "/airtel-aaa-aaa-secure-request-handler/api/subscriber/export-report",
+    REPORT_REQUEST_PRODUCTS: "/airtel-aaa-aaa-secure-request-handler/api/product-catalog/export-report",
+    REPORT_REQUEST_MESSAGE: "/airtel-aaa-aaa-secure-request-handler/api/message-logs/export-report",
+    REPORT_REQUEST_SESSION: "/airtel-aaa-aaa-secure-request-handler/api/session-history/export-report",
+    REPORT_REQUEST_AUDIT_LOGS: "/airtel-aaa-aaa-secure-request-handler/api/audit-logs/export-report",
+
+    // CREATE_BUCKET: "/airtel-aaa-product-catalog-management/api/buckets",
+    // EDIT_BUCKET: "/airtel-aaa-product-catalog-management/api/buckets",
+    // DELETE_BUCKET: "/airtel-aaa-product-catalog-management/api/buckets",
+    // GET_BUCKETS_LIST: "/airtel-aaa-product-catalog-management/api/buckets/list",
+    // GET_BUCKETS: "/airtel-aaa-product-catalog-management/api/buckets/filter",
+    CREATE_BUCKET: "/airtel-aaa-aaa-secure-request-handler/api/bucket-management/create-bucket",
+    EDIT_BUCKET: "/airtel-aaa-aaa-secure-request-handler/api/bucket-management/update-bucket",
+    DELETE_BUCKET: "/airtel-aaa-aaa-secure-request-handler/api/bucket-management/delete-bucket",
+    GET_BUCKETS_LIST: "/airtel-aaa-aaa-secure-request-handler/api/product-catalog/get-bucket-list",
+    GET_BUCKETS: "/airtel-aaa-aaa-secure-request-handler/api/bucket-management/filter-buckets",
+
+    // CREATE_QOS_PROFILE: "/airtel-aaa-product-catalog-management/api/qos-profiles",
+    // EDIT_QOS_PROFILE: "/airtel-aaa-product-catalog-management/api/qos-profiles",
+    // DELETE_QOS_PROFILE: "/airtel-aaa-product-catalog-management/api/qos-profiles",
+    // GET_QOS_PROFILES: "/airtel-aaa-product-catalog-management/api/qos-profiles/filter",
+    CREATE_QOS_PROFILE: "/airtel-aaa-aaa-secure-request-handler/api/qos-management/create-qos-profile",
+    EDIT_QOS_PROFILE: "/airtel-aaa-aaa-secure-request-handler/api/qos-management/update-qos-profile",
+    DELETE_QOS_PROFILE: "/airtel-aaa-aaa-secure-request-handler/api/qos-management/delete-qos-profile",
+    GET_QOS_PROFILES: "/airtel-aaa-aaa-secure-request-handler/api/qos-management/filter-qos-profiles",
+
+    // CREATE_BNG: "/airtel-aaa-user-provisioning-service/api/bng",
+    // UPDATE_BNG: "/airtel-aaa-user-provisioning-service/api/bng",
+    // SEARCH_BNG: "/airtel-aaa-user-provisioning-service/api/bng/search",
+    // PING_BNG: "/airtel-aaa-user-provisioning-service/api/bng/ping",
+    CREATE_BNG: "/airtel-aaa-aaa-secure-request-handler/api/bng-management/create-bng",
+    UPDATE_BNG: "/airtel-aaa-aaa-secure-request-handler/api/bng-management/update-bng",
+    SEARCH_BNG: "/airtel-aaa-aaa-secure-request-handler/api/bng-management/search-bng",
+    PING_BNG: "/airtel-aaa-aaa-secure-request-handler/api/bng-management/ip-ping",
+
+    // CREATE_NOTIFICATION_TEMPLATE: "/airtel-aaa-user-provisioning-service/api/notification-templates",
+    // UPDATE_NOTIFICATION_TEMPLATE: "/airtel-aaa-user-provisioning-service/api/notification-templates",
+    // GET_NOTIFICATION_TEMPLATE_DETAILS: "/airtel-aaa-user-provisioning-service/api/notification-templates",
+    // GET_NOTIFICATION_TEMPLATES: "/airtel-aaa-user-provisioning-service/api/notification-templates/search",
+    // GET_NOTIFICATIONS_LIST: "/airtel-aaa-user-provisioning-service/api/notification-templates/list",
+    CREATE_NOTIFICATION_TEMPLATE: "/airtel-aaa-aaa-secure-request-handler/api/notification-template-management/create-template",
+    UPDATE_NOTIFICATION_TEMPLATE: "/airtel-aaa-aaa-secure-request-handler/api/notification-template-management/update-template",
+    GET_NOTIFICATION_TEMPLATE_DETAILS: "/airtel-aaa-aaa-secure-request-handler/api/notification-template-management/search-template",
+    GET_NOTIFICATION_TEMPLATES: "/airtel-aaa-aaa-secure-request-handler/api/notification-template-management/search-templates/search",
+    GET_NOTIFICATIONS_LIST: "/airtel-aaa-aaa-secure-request-handler/api/notification-template-management/search-template-list/list",
+
+    // PERMISSION_API: "/airtel-aaa-airtel-aaa-ums/ums/permission",
+    // SINGLE_PERMISSION: "/airtel-aaa-airtel-aaa-ums/ums/permission",
+    // GET_PERMISSION_META_DATA: "/airtel-aaa-airtel-aaa-ums/ums/permission/meta-data",
+    // PERMISSION_BY_COMPONENT: "/airtel-aaa-airtel-aaa-ums/ums/permission/action-hierarchy-for-create-permission",
+    // MENU_TO_COMPONENT: "/airtel-aaa-airtel-aaa-ums/ums/permission/menu-components",
+    // EDIT_PERMISSION: "/airtel-aaa-airtel-aaa-ums/ums/permission",
+    // CREATE_PERMISSION: "/airtel-aaa-airtel-aaa-ums/ums/permission",
+    PERMISSION_API: "/airtel-aaa-aaa-secure-request-handler/api/ums/permission/search",
+    SINGLE_PERMISSION: "/airtel-aaa-aaa-secure-request-handler/api/ums/permission/get-permission-details",
+    GET_PERMISSION_META_DATA: "/airtel-aaa-aaa-secure-request-handler/api/ums/permission/get-permission-meta-data/meta-data",
+    PERMISSION_BY_COMPONENT: "/airtel-aaa-aaa-secure-request-handler/api/ums/permission/action-hierarchy-for-create-permission",
+    MENU_TO_COMPONENT: "/airtel-aaa-aaa-secure-request-handler/api/ums/permission/get-menu-components",
+    EDIT_PERMISSION: "/airtel-aaa-aaa-secure-request-handler/api/ums/permission/update-permission",
+    CREATE_PERMISSION: "/airtel-aaa-aaa-secure-request-handler/api/ums/permission/create-permission",
+
+    // SEARCH_ALL_ROLE: "/airtel-aaa-airtel-aaa-ums/ums/role",
+    // GET_SINGLE_ROLE: "/airtel-aaa-airtel-aaa-ums/ums/role",
+    // CREATE_ROLE: "/airtel-aaa-airtel-aaa-ums/ums/role",
+    // UPDATE_ROLE: "/airtel-aaa-airtel-aaa-ums/ums/role",
+    // GET_ALL_ROLES_META_DATA: "/airtel-aaa-airtel-aaa-ums/ums/role/meta-data",
+    // GET_STATUS_META_DATA: "/airtel-aaa-airtel-aaa-ums/ums/user/status/meta-data",
+    SEARCH_ALL_ROLE: "/airtel-aaa-aaa-secure-request-handler/api/ums/role/get-role-list",
+    GET_SINGLE_ROLE: "/airtel-aaa-aaa-secure-request-handler/api/ums/role/get-role-details",
+    CREATE_ROLE: "/airtel-aaa-aaa-secure-request-handler/api/ums/role/create-role",
+    UPDATE_ROLE: "/airtel-aaa-aaa-secure-request-handler/api/ums/role/update-role",
+    GET_ALL_ROLES_META_DATA: "/airtel-aaa-aaa-secure-request-handler/api/ums/permission/get-role-meta-data/meta-data",
+    GET_STATUS_META_DATA: "/airtel-aaa-aaa-secure-request-handler/api/ums/permission/get-status-meta-data/meta-data",
+
+    // SEARCH_ALL_USERS: "/airtel-aaa-airtel-aaa-ums/ums/user",
+    // SINGLE_USER_DETAILS: "/airtel-aaa-airtel-aaa-ums/ums/user",
+    // CREATE_NEW_USER: "/airtel-aaa-airtel-aaa-ums/ums/user",
+    // UPDATE_USER: "/airtel-aaa-airtel-aaa-ums/ums/user",
+    SEARCH_ALL_USERS: "/airtel-aaa-aaa-secure-request-handler/api/ums/user/get-all-users",
+    SINGLE_USER_DETAILS: "/airtel-aaa-aaa-secure-request-handler/api/ums/user/get-user-details",
+    CREATE_NEW_USER: "/airtel-aaa-aaa-secure-request-handler/api/ums/user/create-user",
+    UPDATE_USER: "/airtel-aaa-aaa-secure-request-handler/api/ums/user/update-user",
+
+    // GET_CONNECTION_HISTORY: "/airtel-aaa-cdr-management-service/api/aaa/admin-console/connection-history/summary/filter",
+    // GET_CONNECTION_HISTORY_DETAIL: "/airtel-aaa-cdr-management-service/api/aaa/admin-console/connection-history/detail",
+    // GET_SESSION_HISTORY: "/airtel-aaa-cdr-management-service/api/aaa/admin-console/connection-history/summary/filter",
+    // GET_SESSION_HISTORY_DETAIL: "/airtel-aaa-cdr-management-service/api/aaa/admin-console/connection-history/detail",
+    GET_CONNECTION_HISTORY: "/airtel-aaa-aaa-secure-request-handler/api/connection-history/search",
+    GET_CONNECTION_HISTORY_DETAIL: "/airtel-aaa-aaa-secure-request-handler/api/session-history/search-session",
+    GET_SESSION_HISTORY: "/airtel-aaa-aaa-secure-request-handler/api/session-history/session-list",
+    GET_SESSION_HISTORY_DETAIL: "/airtel-aaa-aaa-secure-request-handler/api/session-history/search-session",
+
+    // TERMINATE_SESSION: "/airtel-aaa-accounting-management-service/api/v1/cache/terminate-sessions",
+    // TERMINATE_CONNECTION: "/airtel-aaa-accounting-management-service/api/v1/cache/terminate-sessions",
+    TERMINATE_CONNECTION: "/airtel-aaa-aaa-secure-request-handler/api/connection-history/terminate-sessions",
+    TERMINATE_SESSION: "/airtel-aaa-aaa-secure-request-handler/api/session-history/terminate-sessions",
+
+    // APPROVE_PLAN: "/airtel-aaa-product-catalog-management/api/plans/approval/approve",
+    // REJECT_PLAN: "/airtel-aaa-product-catalog-management/api/plans/approval/reject",
+    // SUBMIT_REQUEST_APPROVAL: "/airtel-aaa-product-catalog-management/api/plans/approval/configs",
+    // GET_APPROVAL_CONFIGS: "/airtel-aaa-product-catalog-management/api/plans/approval/configs",
+    // GET_PENDING_APPROVALS: "/airtel-aaa-product-catalog-management/api/plans/approval/pending",
+    // GET_APPROVAL_HISTORY: "/airtel-aaa-product-catalog-management/api/plans/approval/history",
+    APPROVE_PLAN: "/airtel-aaa-aaa-secure-request-handler/api/plans/approval/approve",
+    REJECT_PLAN: "/airtel-aaa-aaa-secure-request-handler/api/plans/approval/reject",
+    SUBMIT_REQUEST_APPROVAL: "/airtel-aaa-aaa-secure-request-handler/api/plans/approval/submit",
+    GET_APPROVAL_CONFIGS: "/airtel-aaa-aaa-secure-request-handler/api/plans/approval/configs",
+    GET_PENDING_APPROVALS: "/airtel-aaa-aaa-secure-request-handler/api/plans/approval/pending",
+    GET_APPROVAL_HISTORY: "/airtel-aaa-aaa-secure-request-handler/api/plans/approval/history",
+
+    // DOWNLOAD_REPORT: "/airtel-aaa-aaa-reports-management-service/api/report-download/download",
+    // REPORT_DATA: "/airtel-aaa-aaa-reports-management-service/api/report-management/filter",
+    DOWNLOAD_REPORT: "/airtel-aaa-aaa-secure-request-handler/api/reports/download-report",
+    REPORT_DATA: "/airtel-aaa-aaa-secure-request-handler/api/reports/get-reports",
+
+    // GET_AUDIT_LOGS: "/airtel-aaa-airtel-aaa-ums/ums/user-activity-log/get-log",
+    GET_AUDIT_LOGS: "/airtel-aaa-aaa-secure-request-handler/api/audit-logs/search",
+
+    // GET_ACCOUNTING_SUMMARY: "/airtel-aaa-aaa-reports-management-service/api/v1/accounting/summary",
+    GET_ACCOUNTING_SUMMARY: "/airtel-aaa-aaa-secure-request-handler/api/dashboard/accounting-summary",
+    GET_USER_STATUS_SUMMARY: "/airtel-aaa-aaa-secure-request-handler/api/subscriber/summary",
+
+    // --------
+
+    
+    // LIST_BNG: "/airtel-aaa-user-provisioning-service/api/bng-management/test-bng",
+    // DELETE_PLAN_BUCKET: "/airtel-aaa-product-catalog-management/api/plan-to-bucket",
+    LIST_BNG: "/airtel-aaa-aaa-secure-request-handler/api/bng-management/test-bng",
+    DELETE_PLAN_BUCKET: "/airtel-aaa-aaa-secure-request-handler/api/product-catalog/delete-plan-to-bucket",
+
+
+    // ------
+
+    GET_SETTINGS: "/configuration-manager-service/application/config/list",
+    UPDATE_OTP_SETTINGS: "/configuration-manager-service/configuration/update",
+
+    //Home
+    GET_RECENT_ACTIVITIES: "/configuration-manager-service/activity/list",
+    GET_ONBOARDING_LIST: "/subscription-manager/user/onboarding/list",
+    GET_USER_SUMMARY: "/subscription-manager/user/summary",
+
+    // CONFIGURATION MANAGEMENT
+    // SEARCH_VENDOR_CONFIGS: "/airtel-aaa-user-provisioning-service/api/vendor-configs/search",
+    // CREATE_VENDOR_CONFIG: "/airtel-aaa-user-provisioning-service/api/vendor-configs",
+    // UPDATE_VENDOR_CONFIG: "/airtel-aaa-user-provisioning-service/api/vendor-configs",
+    // GET_ENTITY_METADATA: "/airtel-aaa-user-provisioning-service/api/entity-metadata",
+    // Delete_VENDOR_CONFIG: "/airtel-aaa-user-provisioning-service/api/vendor-configs",
+    // GET_VENDOR_CONFIG_LIST: "/airtel-aaa-user-provisioning-service/api/vendor-configs/list",
+    SEARCH_VENDOR_CONFIGS: "/airtel-aaa-aaa-secure-request-handler/api/vendor-configs/search-vendors",
+    CREATE_VENDOR_CONFIG: "/airtel-aaa-aaa-secure-request-handler/api/vendor-configs/create-vendor",
+    UPDATE_VENDOR_CONFIG: "/airtel-aaa-aaa-secure-request-handler/api/vendor-configs/update-vendor",
+    GET_ENTITY_METADATA: "/airtel-aaa-aaa-secure-request-handler/api/parameter-list",
+    DELETE_VENDOR_CONFIG: "/airtel-aaa-aaa-secure-request-handler/api/vendor-configs/delete-vendor",
+    GET_VENDOR_CONFIG_LIST: "/airtel-aaa-aaa-secure-request-handler/api/vendor-configs/list", 
+    //Test
+ }
+ 
+export default API_ENDPOINTS;

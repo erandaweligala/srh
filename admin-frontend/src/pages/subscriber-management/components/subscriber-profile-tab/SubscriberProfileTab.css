@@ -1,0 +1,14 @@
+.bordered-tab-header .ant-tabs-nav {
+    border-left: 1px solid #d9d9d9;
+    border-right: 1px solid #d9d9d9;
+    border-bottom: none;
+    border-radius: 0;
+}
+
+.bordered-tab-header .ant-tabs-content-holder {
+    border: none;
+}
+
+.custom-status-tab{
+    justify-content: left;
+}

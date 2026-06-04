@@ -1,0 +1,924 @@
+{
+  "uuid": "6ea2d34f-bd88-4c34-9543-b958cfad54e2",
+  "lastMigration": 33,
+  "name": "AAA",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3004,
+  "hostname": "",
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "245f304c-1b5f-45d4-8f13-b46fd4c13b9c"
+    },
+    {
+      "type": "route",
+      "uuid": "42deaa56-5493-41ba-a1d6-a994cfd28e22"
+    },
+    {
+      "type": "route",
+      "uuid": "b1b250d3-59d1-4e16-bd99-867bbea7d29b"
+    },
+    {
+      "type": "route",
+      "uuid": "5acd8445-6505-4539-a091-d0f00d56b138"
+    },
+    {
+      "type": "route",
+      "uuid": "84aa2eec-8a67-45b0-a54a-e900fd476664"
+    },
+    {
+      "type": "route",
+      "uuid": "5240a3e8-af9b-4ddc-bf1a-b47190212ee0"
+    },
+    {
+      "type": "route",
+      "uuid": "46588be9-25b5-4907-8a00-4d6061d8f384"
+    },
+    {
+      "type": "route",
+      "uuid": "9a490c9e-b2ec-4141-bf2b-25bd6b706a6b"
+    },
+    {
+      "type": "route",
+      "uuid": "70364d11-bb59-4331-ba49-76c63ae713de"
+    },
+    {
+      "type": "route",
+      "uuid": "3feb871b-fc21-4f32-9f94-7cb4b886c8e7"
+    },
+    {
+      "type": "route",
+      "uuid": "ca3e6940-fa3d-4032-972d-9fd2b203d385"
+    },
+    {
+      "type": "route",
+      "uuid": "4a15c9a5-c003-4da1-bc47-ea8f42f974a6"
+    },
+    {
+      "type": "route",
+      "uuid": "e64095f7-1395-43eb-9e5f-8234ca58cd26"
+    },
+    {
+      "type": "route",
+      "uuid": "26e64f2c-b568-4e17-9e6e-77aacd6f680d"
+    },
+    {
+      "type": "route",
+      "uuid": "dce311f0-0ec5-4ca0-892c-6cc7549e054b"
+    },
+    {
+      "type": "route",
+      "uuid": "12e843ec-2412-4b2d-8515-58b4761ee019"
+    },
+    {
+      "type": "route",
+      "uuid": "99ffb623-904e-4968-b43d-749044efcac3"
+    },
+    {
+      "type": "route",
+      "uuid": "df0d73a3-9fed-47b4-9bc5-4e2c4eadba7d"
+    },
+    {
+      "type": "route",
+      "uuid": "bde40ce9-1fea-4912-b2e5-b59b29cd44c8"
+    },
+    {
+      "type": "route",
+      "uuid": "9510e967-5292-4991-a620-c2aed6adffd5"
+    },
+    {
+      "type": "route",
+      "uuid": "3aa3eb20-aefc-4d09-a40e-38b061813e32"
+    },
+    {
+      "type": "route",
+      "uuid": "4043f203-2afa-4c4c-81d7-d99ca50e34bf"
+    },
+    {
+      "type": "route",
+      "uuid": "8f29bb55-a247-4a7f-b5d0-48a1a9285242"
+    },
+    {
+      "type": "route",
+      "uuid": "5946e1e4-fe89-4a9f-8b2d-6b9c1e216cd4"
+    },
+    {
+      "type": "route",
+      "uuid": "f0a2728d-4241-40d2-8b06-a9294801995d"
+    }
+  ],
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "245f304c-1b5f-45d4-8f13-b46fd4c13b9c",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "https:/aeb53274042be477aba79f9076056316-ee9e05124271e8a5.elb.ap-southeast-2.amazonaws.com/airtel-aaa-user-provisioning-service/api/user/list",
+      "responses": [
+        {
+          "uuid": "182e60ab-8243-4257-ab31-c41d933ef1c8",
+          "body": "{\n  \"success\": true,\n  \"message\": \"User list retrieved successfully\",\n  \"data\": [\n    {\n      \"userName\": \"MAC_101\"\n    },\n    {\n      \"userName\": \"MAC_111\"\n    },\n    {\n      \"userName\": \"PAP_200\"\n    },\n    {\n      \"userName\": \"MAC_102\"\n    },\n    {\n      \"userName\": \"MAC_103\"\n    },\n    {\n      \"userName\": \"MAC_104\"\n    },\n    {\n      \"userName\": \"MAC_107\"\n    },\n    {\n      \"userName\": \"MAC_106\"\n    },\n    {\n      \"userName\": \"user302\"\n    },\n    {\n      \"userName\": \"MAC_5000\"\n    },\n    {\n      \"userName\": \"123456\"\n    },\n    {\n      \"userName\": \"MAC_109\"\n    },\n    {\n      \"userName\": \"MAC_112\"\n    },\n    {\n      \"userName\": \"12345001\"\n    },\n    {\n      \"userName\": \"12345005\"\n    },\n    {\n      \"userName\": \"nuwani.kankanamage\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "42deaa56-5493-41ba-a1d6-a994cfd28e22",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "airtel-aaa-aaa-reports-management-service/api/report-download/download",
+      "responses": [
+        {
+          "uuid": "54de7b68-6805-4f3d-a9ba-afd82762ee61",
+          "body": "{\n  \"success\": true,\n  \"message\": \"Operation Successful\",\n  \"data\": \"UEsDBBQACAgIAF14kVsAAAAAAAAAAAAAAAATAAAAW0NvbnRlbnRfVHlwZXNdLnhtbLVTy27CMBD8lcjXKjb0UFUVgUMfxxap9ANce5NY+CWvofD3XQc4lFKJCnHyY2ZnZlf2ZLZxtlpDQhN8w8Z8xCrwKmjju4Z9LF7qe1Zhll5LGzw0bAvIZtPJYhsBK6r12LA+5/ggBKoenEQeInhC2pCczHRMnYhSLWUH4nY0uhMq+Aw+17losOnkCVq5srl63N0X6YbJGK1RMlMssfb6SLTeC/IEduBgbyLeEIFVzxtS2bVDKDJxhsNxYTlT3RsNJhkN/4oW2tYo0EGtHJVwKKoadB0TEVM2sM85lym/SkeCgshzQlGQNL/E+zAWFRKcZViIFzkedYsxgdTYA2RnOfYygX7PiV7T7xAbK34Qrpgjb+2JKZQAA3LNCdDKnTT+lPtXSMvPEJbX8y8Ow/4v+wFEMSzjQw4xfO/pN1BLBwiRLCi8OwEAAB0EAABQSwMEFAAICAgAXXiRWwAAAAAAAAAAAAAAAAsAAABfcmVscy8ucmVsc62SwUoDMRCGXyXMvZttBRFp2osIvYnUBxiT2d2wm0xIRt2+vcGLtmxBweMwM9//Mcl2P4dJvVMunqOBddOComjZ+dgbeDk+ru5AFcHocOJIBk5UYL/bPtOEUlfK4FNRlRGLgUEk3Wtd7EABS8OJYu10nANKLXOvE9oRe9Kbtr3V+ScDzpnq4Azkg1uDOmLuSQzMk/7gPL4yj03F1sYp0W9Cueu8pQe2b4GiLGRfTIBedtl8uzi2T5nrJqb03zI0C0VHbpVqAmXx9eJXjG4WjCxn+pvS9UfRgQQdCn5RL4T02R/YfQJQSwcIbjIIS+UAAABKAgAAUEsDBBQACAgIAF14kVsAAAAAAAAAAAAAAAAQAAAAZG9jUHJvcHMvYXBwLnhtbE2OwQrCMBBE74L/EHJvt3oQkTSlIIIne9APCOnWBppNSFbp55uTepwZ5vFUt/pFvDFlF6iVu7qRAsmG0dGzlY/7pTrKTm83akghYmKHWZQH5VbOzPEEkO2M3uS6zFSWKSRvuMT0hDBNzuI52JdHYtg3zQFwZaQRxyp+gVKrPsbFWcNFQvfRFKQYblcF/72Cn4P+AFBLBwg2boMhkwAAALgAAABQSwMEFAAICAgAXXiRWwAAAAAAAAAAAAAAABEAAABkb2NQcm9wcy9jb3JlLnhtbG2Q3UrEMBBGXyXkvp2m9W9D20WUBUFxwRXFu5CMbbFNQhLt7tub1rWCepfkO3OYfOV6P/TkA53vjK4oSzNKUEujOt1U9HG3SS4o8UFoJXqjsaIH9HRdl9JyaRxunbHoQoeeRI/2XNqKtiFYDuBli4PwaSR0DF+NG0SIV9eAFfJNNAh5lp3BgEEoEQRMwsQuRnpUKrko7bvrZ4GSgD0OqIMHljL4YQO6wf87MCcLuffdQo3jmI7FzMWNGDzf3T7Myyednv4ukdblUc2lQxFQkSjg4WBjJd/JU3F1vdvQOs/y04TlCTvfZSuer3hx8lLCr/lJ+HU2rr6MhbRItvc3E7c8l/Cn5voTUEsHCOoPAkYHAQAAsQEAAFBLAwQUAAgICABdeJFbAAAAAAAAAAAAAAAAFAAAAHhsL3NoYXJlZFN0cmluZ3MueG1shVRNb6MwEL2vtP/B4tJTwDYfAYtQIUK6SNm2asleEQI3QQJDbVO1/76OsqpaG7WWL34znpn3nuX4+nXowQvlohvZxkI2tABlzdh27LixDuVuFVrXye9fsRASNOPM5MYKVM7MuueZZhfAdS2gyjCxsU5STsRxRHOiQy3scaJMRZ5GPtRSHfnREROndStOlMqhdzCEgTPUHbOSWHRJLJNiGzsyiZ3z6YKk7dAxcBCU65EzBm7rgeqBGz7OEzBLbWtJQdmZFx6ooqMoLnRvpJLGzBdzL0E2tkapP2V5Dx5lLWdhtKei4d20VDDQAOdLdFZEXYj+L4xc/TqG2F8hvIJhiQLirglCNvLWGIZ6JqfPCGP0sbCe0Ch/JF2S24ORDv1NM1C3LadCgKsMknxH8pzsEIGIIFz3Z6/fAH3thDTUWP9AIiIetGEQ+K4uTpKmaeVhXP1L98U2LYu722qXFvvccM+gf+ST931fDxE/sqEfhNCYUBdvwQe4+EgvorZAzE2jtHqa+/5NTzTE1ebCxMU2jkI/RIt6wKjaHu73RZaWeXV4zB8WJ7ky3tL3LiGD0MdYUYkwwUhtOwi9MPikhqP+i+QdUEsHCNE5doXCAQAAXQQAAFBLAwQUAAgICABdeJFbAAAAAAAAAAAAAAAADQAAAHhsL3N0eWxlcy54bWylkrFuwyAQhvdKfQfE3uBkqKLKJkMlV52TSl2JOduocFhAIrtPXzBOk0wdOt3dz/0fh8/lbjSanMF5ZbGi61VBCWBjpcKuoh+H+mlLd/zxofRh0rDvAQKJDvQV7UMYXhjzTQ9G+JUdAONJa50RIZauY35wIKRPJqPZpiiemREKKS/xZGoTPGnsCUNFC8p42Vq8KmuaBV76b3IWOippttjWWG0dUShhBFnRbdJQGMhdr0Kro1MzTxilpyxvkjBPuvQZhdYlkeVb5uCjSWn9O8SGZoGXgwgBHNaxIEt+mAaoKFqEjJn7/uiWwn29OTHdOOYQLz5aJ+MWbt+fJV5qaEM0ONX1KQY7sHQYgjUxkUp0FoVOyItjSSK2Aa33aXWf7R17bEnewbtMn5+k51/SONCSZkwuEv+Wltn/xpKxvefPaHb93fgPUEsHCK6Rk9ZFAQAAowIAAFBLAwQUAAgICABdeJFbAAAAAAAAAAAAAAAADwAAAHhsL3dvcmtib29rLnhtbI2Oy07DMBBF90j8gzV7agcQgihONwipO4RK91N70liNHxqbls8nSZXCkpV1dc8c32b97QdxIs4uBg3VSoGgYKJ14aDhc/t29wzr9vamOUc+7mM8ipEPWUNfSqqlzKYnj3kVE4Wx6SJ7LGPkg8yJCW3uiYof5L1ST9KjC3Ax1PwfR+w6Z+g1mi9PoVwkTAOWcW3uXcrQXpe9s7BYqHpRjxo6HDKBbJup2Tk6519wigJNcSfa4l6Dmjj5B5w3L68I6EnDB6XIBQTXzmrgjX0AMfebMVazYTmTy0ftD1BLBwgRA13p2wAAAF4BAABQSwMEFAAICAgAYHiRWwAAAAAAAAAAAAAAABoAAAB4bC9fcmVscy93b3JrYm9vay54bWwucmVsc62RTWvDMAxA/4rRfXHSwRijbi9j0Gs/foCwlTg0sY2ltcu/r7vD1kAHO/QkjPB7D7Rcf42DOlHmPgYDTVWDomCj60Nn4LD/eHoFxYLB4RADGZiIYb1abmlAKV/Y94lVYQQ24EXSm9ZsPY3IVUwUyqaNeUQpz9zphPaIHelFXb/ofMuAOVNtnIG8cQ2oPeaOxAB7zOR2kksaVwVcVlOi/2hj2/aW3qP9HCnIHbuewUHfj1ncxMg00OMrvql/6Z9/9eeYj+yJ5FpeRvPokh/BNUbPrr26AFBLBwhn66Ko1QAAADQCAABQSwMEFAAICAgAYHiRWwAAAAAAAAAAAAAAABgAAAB4bC93b3Jrc2hlZXRzL3NoZWV0MS54bWyFlltvmzAUgN8n7T9Yfl8gJCFtBVTNGhoiTZq2bu8OmIsKGBk32c+fYR0q55wqb1h85+LvGOTg/k9Ts7PUfaXakC8XLmeyTVVWtUXIfz3HX274ffT5U3BR+qUvpTTMBrR9yEtjujvH6dNSNqJfqE629k2udCOMXerC6TstRTYGNbXjua7vNKJqeRRkVSPboSLTMg/5w/Lu6HMnCkb2dyUv/btnNpQ+KfUyLJIs5LZFI04/ZS1TI+3a6Fc5RDsoPB67+a5ZJnPxWpsf6nKQVVEau9ON3er/ko/CiCjQ6sK0fWMbTIeHh6UtFPKes34oGgXnyA2csy2UvhE7TCznxFdMeHPiEROrObHHxHpOxJjYzIknTPhz4oCJ7ZxIMHEzJ46YuJ0Ix/qdJHuTZA8rhJYJBGomEOj5epY9gYBZxAQChvFEIGAah+u9JAQCJnYkkC2tezXpXuEYMMQdgUDdBAJ1X8+yJ5BboJtAoG4Cgbox4oEzlhBZoG4C+UD3etK9xpWBhR1GkG4CgbqJQgDZEwg83QQCdRO9QN3Xd5QQhUCWI4H4tO7NpHuDY8BPbIcRpJtAoG6iENRNIOBLiwkE6iZ6gbqJLOAzSogs8HRjZOXSuv1Jt49j4OnGCNJNIFA3RpBuoheAxEQWqJvoBeomskDdRBaom2gX6nbe3U06UchvQhdV27OTMkY1NmyxtUPLlTJSDyv7fyrthWta1DI3I8WZ/nfpGZ+N6t5ihzvTdK+L/gJQSwcI8T9E0TECAAALCgAAUEsBAhQAFAAICAgAXXiRW5EsKLw7AQAAHQQAABMAAAAAAAAAAAAAAAAAAAAAAFtDb250ZW50X1R5cGVzXS54bWxQSwECFAAUAAgICABdeJFbbjIIS+UAAABKAgAACwAAAAAAAAAAAAAAAAB8AQAAX3JlbHMvLnJlbHNQSwECFAAUAAgICABdeJFbNm6DIZMAAAC4AAAAEAAAAAAAAAAAAAAAAACaAgAAZG9jUHJvcHMvYXBwLnhtbFBLAQIUABQACAgIAF14kVvqDwJGBwEAALEBAAARAAAAAAAAAAAAAAAAAGsDAABkb2NQcm9wcy9jb3JlLnhtbFBLAQIUABQACAgIAF14kVvROXaFwgEAAF0EAAAUAAAAAAAAAAAAAAAAALEEAAB4bC9zaGFyZWRTdHJpbmdzLnhtbFBLAQIUABQACAgIAF14kVuukZPWRQEAAKMCAAANAAAAAAAAAAAAAAAAALUGAAB4bC9zdHlsZXMueG1sUEsBAhQAFAAICAgAXXiRWxEDXenbAAAAXgEAAA8AAAAAAAAAAAAAAAAANQgAAHhsL3dvcmtib29rLnhtbFBLAQIUABQACAgIAGB4kVtn66Ko1QAAADQCAAAaAAAAAAAAAAAAAAAAAE0JAAB4bC9fcmVscy93b3JrYm9vay54bWwucmVsc1BLAQIUABQACAgIAGB4kVvxP0TRMQIAAAsKAAAYAAAAAAAAAAAAAAAAAGoKAAB4bC93b3Jrc2hlZXRzL3NoZWV0MS54bWxQSwUGAAAAAAkACQA/AgAA4QwAAAAA\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "b1b250d3-59d1-4e16-bd99-867bbea7d29b",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "airtel-aaa-aaa-reports-management-service/api/report-management/filter",
+      "responses": [
+        {
+          "uuid": "0a3ca4cb-e85f-4308-ab28-6c3a8b3f3a02",
+          "body": "{\n  \"success\": true,\n  \"message\": \"report details retrieved successfully\",\n  \"data\": {\n    \"page\": 1,\n    \"page_size\": 10,\n    \"total_records\": 1,\n    \"logs\": [\n      {\n        \"id\": 123,\n        \"createdBy\": \"admin\",\n        \"createdAt\": \"2025-12-17T12:30:00Z\",\n        \"reportType\": \"SALES\",\n        \"reportStatus\": \"COMPLETED\",\n        \"filterValuesJson\": \"{\\\"region\\\": \\\"Asia\\\", \\\"category\\\": \\\"Electronics\\\"}\",\n        \"lastUpdatedAt\": \"2025-12-17T12:45:00Z\",\n        \"updatedBy\": \"admin\",\n        \"updatedAt\": \"2025-12-17T12:45:00Z\",\n        \"executedUser\": \"system\",\n        \"description\": \"Monthly sales report\",\n        \"format\": \"EXCEL\"\n      }\n    ]\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "5acd8445-6505-4539-a091-d0f00d56b138",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "airtel-aaa-aaa-secure-request-handler/api/ums/user/get-all-users",
+      "responses": [
+        {
+          "uuid": "683c3c7c-a256-4abc-bc78-37bbb01b5922",
+          "body": "{\n  \"responseData\": [\n    {\n      \"userId\": \"string\",\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"mobileNumber\": \"string\",\n      \"roleName\": \"string\",\n      \"status\": \"Active\",\n      \"lastLogin\": \"string\"\n    },\n    {\n      \"userId\": \"string\",\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"mobileNumber\": \"string\",\n      \"roleName\": \"string\",\n      \"status\": \"string\",\n      \"lastLogin\": \"string\"\n    },\n    {\n      \"userId\": \"string\",\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"mobileNumber\": \"string\",\n      \"roleName\": \"string\",\n      \"status\": \"string\",\n      \"lastLogin\": \"string\"\n    },\n    {\n      \"userId\": \"string\",\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"mobileNumber\": \"string\",\n      \"roleName\": \"string\",\n      \"status\": \"string\",\n      \"lastLogin\": \"string\"\n    },\n    {\n      \"userId\": \"string\",\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"mobileNumber\": \"string\",\n      \"roleName\": \"string\",\n      \"status\": \"string\",\n      \"lastLogin\": \"string\"\n    },\n    {\n      \"userId\": \"string\",\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"mobileNumber\": \"string\",\n      \"roleName\": \"string\",\n      \"status\": \"string\",\n      \"lastLogin\": \"string\"\n    },\n    {\n      \"userId\": \"string\",\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"mobileNumber\": \"string\",\n      \"roleName\": \"string\",\n      \"status\": \"string\",\n      \"lastLogin\": \"string\"\n    },\n    {\n      \"userId\": \"string\",\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"mobileNumber\": \"string\",\n      \"roleName\": \"string\",\n      \"status\": \"string\",\n      \"lastLogin\": \"string\"\n    },\n    {\n      \"userId\": \"string\",\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"mobileNumber\": \"string\",\n      \"roleName\": \"string\",\n      \"status\": \"string\",\n      \"lastLogin\": \"string\"\n    },\n    {\n      \"userId\": \"string\",\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"mobileNumber\": \"string\",\n      \"roleName\": \"string\",\n      \"status\": \"string\",\n      \"lastLogin\": \"string\"\n    },\n    {\n      \"userId\": \"string\",\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"mobileNumber\": \"string\",\n      \"roleName\": \"string\",\n      \"status\": \"string\",\n      \"lastLogin\": \"string\"\n    },\n    {\n      \"userId\": \"string\",\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"mobileNumber\": \"string\",\n      \"roleName\": \"string\",\n      \"status\": \"string\",\n      \"lastLogin\": \"string\"\n    },\n    {\n      \"userId\": \"string\",\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"mobileNumber\": \"string\",\n      \"roleName\": \"string\",\n      \"status\": \"string\",\n      \"lastLogin\": \"string\"\n    },\n    {\n      \"userId\": \"string\",\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"mobileNumber\": \"string\",\n      \"roleName\": \"string\",\n      \"status\": \"string\",\n      \"lastLogin\": \"string\"\n    },\n    {\n      \"userId\": \"string\",\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"mobileNumber\": \"string\",\n      \"roleName\": \"string\",\n      \"status\": \"string\",\n      \"lastLogin\": \"string\"\n    },\n    {\n      \"userId\": \"string\",\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"mobileNumber\": \"string\",\n      \"roleName\": \"string\",\n      \"status\": \"string\",\n      \"lastLogin\": \"string\"\n    }\n  ],\n  \"result\": {\n    \"resultCode\": \"200\",\n    \"resultDescription\": \"success\",\n    \"pageDetail\": {\n      \"pageNumber\": 1,\n      \"pageElementCount\": 10,\n      \"totalRecords\": 16\n    }\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "84aa2eec-8a67-45b0-a54a-e900fd476664",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "airtel-aaa-airtel-aaa-ums/ums/user",
+      "responses": [
+        {
+          "uuid": "b4fe19fe-9490-4057-8501-dee2fd0e53e8",
+          "body": "{\n  \"responseData\": {\n    \"userName\": \"string\"\n  },\n  \"result\": {\n    \"resultCode\": \"200\",\n    \"resultDescription\": \"success\",\n    \"pageDetail\": \"null\"\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "5240a3e8-af9b-4ddc-bf1a-b47190212ee0",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "airtel-aaa-airtel-aaa-ums/ums/role/meta-data",
+      "responses": [
+        {
+          "uuid": "d3b30f0b-2502-4e55-814d-76977f7dbfaa",
+          "body": "{\n  \"responseData\": [\n    {\n      \"label\": \"Admin\",\n      \"value\": \"1\"\n    },\n    {\n      \"label\": \"Super admin\",\n      \"value\": \"2\"\n    }\n  ],\n  \"result\": {\n    \"resultCode\": \"200\",\n    \"resultDescription\": \"success\",\n    \"pageDetail\": \"null\"\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "46588be9-25b5-4907-8a00-4d6061d8f384",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "airtel-aaa-airtel-aaa-ums/ums/user/status/meta-data",
+      "responses": [
+        {
+          "uuid": "3c621693-8f04-418f-b519-3e72d8c2363e",
+          "body": "{\n  \"responseData\": [\n    {\n      \"label\": \"Active\",\n      \"value\": \"1\"\n    },\n    {\n      \"label\": \"In Active\",\n      \"value\": \"2\"\n    }\n  ],\n  \"result\": {\n    \"resultCode\": \"200\",\n    \"resultDescription\": \"success\",\n    \"pageDetail\": \"null\"\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "9a490c9e-b2ec-4141-bf2b-25bd6b706a6b",
+      "type": "http",
+      "documentation": "",
+      "method": "patch",
+      "endpoint": "airtel-aaa-airtel-aaa-ums/ums/user",
+      "responses": [
+        {
+          "uuid": "a3a48169-3bc5-4b8d-adff-07c9786196b8",
+          "body": "{\n  \"responseData\": {\n    \"userName\": \"string\"\n  },\n  \"result\": {\n    \"resultCode\": \"200\",\n    \"resultDescription\": \"success\",\n    \"pageDetail\": \"null\"\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "70364d11-bb59-4331-ba49-76c63ae713de",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "airtel-aaa-airtel-aaa-ums/ums/user/:userId",
+      "responses": [
+        {
+          "uuid": "41f27eee-2065-48b0-b8a4-ed101d2836e5",
+          "body": "{\n  \"responseData\": {\n    \"userId\": \"string1\",\n    \"name\": \"string1\",\n    \"email\": \"string1\",\n    \"mobileNumber\": \"string1\",\n    \"roleName\": \"Admin\",\n    \"status\": \"string1\",\n    \"lastLogin\": \"string1\",\n    \"roleId\": 1\n  },\n  \"result\": {\n    \"resultCode\": \"200\",\n    \"resultDescription\": \"success\",\n    \"pageDetail\": \"null\"\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "3feb871b-fc21-4f32-9f94-7cb4b886c8e7",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "airtel-aaa-airtel-aaa-ums/ums/role",
+      "responses": [
+        {
+          "uuid": "fd96e368-0ccc-4cc6-b904-7cf597cfc2d9",
+          "body": "{\n  \"responseData\": [\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    }\n  ],\n  \"result\": {\n    \"resultCode\": \"200\",\n    \"resultDescription\": \"success\",\n    \"pageDetail\": {\n      \"pageNumber\": 1,\n      \"pageElementCount\": 10,\n      \"totalRecords\": 16\n    }\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "ca3e6940-fa3d-4032-972d-9fd2b203d385",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "airtel-aaa-airtel-aaa-ums/ums/role/:roleId",
+      "responses": [
+        {
+          "uuid": "547ffb6c-b5d2-4ed9-b213-2b1eec496a4a",
+          "body": "{\n  \"responseData\": {\n    \"userId\": \"string1\",\n    \"name\": \"string1\",\n    \"email\": \"string1\",\n    \"mobileNumber\": \"string1\",\n    \"roleName\": \"Admin\",\n    \"status\": \"string1\",\n    \"lastLogin\": \"string1\",\n    \"roleId\": 1\n  },\n  \"result\": {\n    \"resultCode\": \"200\",\n    \"resultDescription\": \"success\",\n    \"pageDetail\": \"null\"\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "4a15c9a5-c003-4da1-bc47-ea8f42f974a6",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "airtel-aaa-airtel-aaa-ums/ums/permission/action-hierarchy-for-create-permission",
+      "responses": [
+        {
+          "uuid": "34cb49ec-019c-499b-992d-81124d77c831",
+          "body": "{\n  \"result\": {\n    \"resultCode\": \"00\",\n    \"resultDescription\": \"SUCCESSFUL\",\n    \"pageDetail\": null\n  },\n  \"responseData\": {\n    \"mainActions\": [\n      {\n        \"isSelected\": null,\n        \"actionId\": \"17\",\n        \"attributes\": [],\n        \"subActions\": [],\n        \"actionName\": \"View\"\n      },\n      {\n        \"isSelected\": null,\n        \"actionId\": \"12\",\n        \"attributes\": [\n          {\n            \"isSelected\": null,\n            \"attributeId\": \"14\",\n            \"attributeName\": \"Add\"\n          }\n        ],\n        \"subActions\": [],\n        \"actionName\": \"Search\"\n      },\n      {\n        \"isSelected\": null,\n        \"actionId\": \"13\",\n        \"attributes\": [],\n        \"subActions\": [\n          {\n            \"isSelected\": null,\n            \"actionId\": \"14\",\n            \"attributes\": [\n              {\n                \"isSelected\": null,\n                \"attributeId\": \"14\",\n                \"attributeName\": \"Add\"\n              }\n            ],\n            \"actionName\": \"Add\"\n          }\n        ],\n        \"actionName\": \"Add New\"\n      },\n      {\n        \"isSelected\": null,\n        \"actionId\": \"15\",\n        \"attributes\": [],\n        \"subActions\": [\n          {\n            \"isSelected\": null,\n            \"actionId\": \"16\",\n            \"attributes\": [],\n            \"actionName\": \"Update\"\n          }\n        ],\n        \"actionName\": \"Edit\"\n      }\n    ]\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "e64095f7-1395-43eb-9e5f-8234ca58cd26",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "airtel-aaa-airtel-aaa-ums/ums/permission",
+      "responses": [
+        {
+          "uuid": "a3a86fb8-cf51-4178-be96-7a76a77e27b6",
+          "body": "{\n  \"result\": {\n    \"resultCode\": \"00\",\n    \"resultDescription\": \"SUCCESSFUL\",\n    \"pageDetail\": {\n      \"pageNumber\": 1,\n      \"pageElementCount\": 1,\n      \"totalRecords\": 1\n    }\n  },\n  \"responseData\": [\n    {\n      \"permissionId\": \"1\",\n      \"name\": \"Subscriber Management Admin Permission\",\n      \"description\": \"Permission to manage subscribers in the system\",\n      \"componentName\": \"Search Subscriber\",\n      \"menuName\": \"Subscriber Management\",\n      \"totalCount\": 1\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "26e64f2c-b568-4e17-9e6e-77aacd6f680d",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "airtel-aaa-airtel-aaa-ums/ums/permission/menu-components",
+      "responses": [
+        {
+          "uuid": "c9c257d5-91e8-4acc-867e-c3aed9056087",
+          "body": "{\n  \"result\": {\n    \"resultCode\": \"00\",\n    \"resultDescription\": \"SUCCESSFUL\",\n    \"pageDetail\": null\n  },\n  \"responseData\": [\n    {\n      \"components\": [],\n      \"menuId\": \"1\",\n      \"menuName\": \"Home\"\n    },\n    {\n      \"components\": [\n        {\n          \"componentId\": \"1\",\n          \"componentName\": \"Subscriber info\",\n          \"description\": null\n        },\n        {\n          \"componentId\": \"2\",\n          \"componentName\": \"Action info\",\n          \"description\": null\n        },\n        {\n          \"componentId\": \"3\",\n          \"componentName\": \"Service info\",\n          \"description\": null\n        },\n        {\n          \"componentId\": \"4\",\n          \"componentName\": \"Connection History\",\n          \"description\": null\n        },\n        {\n          \"componentId\": \"5\",\n          \"componentName\": \"Search Subscriber\",\n          \"description\": null\n        },\n        {\n          \"componentId\": \"23\",\n          \"componentName\": \"Subscriber Profile\",\n          \"description\": null\n        }\n      ],\n      \"menuId\": \"2\",\n      \"menuName\": \"Subscriber Management\"\n    },\n    {\n      \"components\": [\n        {\n          \"componentId\": \"7\",\n          \"componentName\": \"BNG Details\",\n          \"description\": null\n        }\n      ],\n      \"menuId\": \"3\",\n      \"menuName\": \"BNG Management\"\n    },\n    {\n      \"components\": [\n        {\n          \"componentId\": \"8\",\n          \"componentName\": \"Session History List\",\n          \"description\": null\n        },\n        {\n          \"componentId\": \"9\",\n          \"componentName\": \"Session History Details\",\n          \"description\": null\n        }\n      ],\n      \"menuId\": \"4\",\n      \"menuName\": \"Session Details\"\n    },\n    {\n      \"components\": [],\n      \"menuId\": \"5\",\n      \"menuName\": \"User Management\"\n    },\n    {\n      \"components\": [],\n      \"menuId\": \"6\",\n      \"menuName\": \"Product Catalog\"\n    },\n    {\n      \"components\": [],\n      \"menuId\": \"7\",\n      \"menuName\": \"Master Data\"\n    },\n    {\n      \"components\": [],\n      \"menuId\": \"8\",\n      \"menuName\": \"Logs\"\n    },\n    {\n      \"components\": [\n        {\n          \"componentId\": \"21\",\n          \"componentName\": \"Reports List\",\n          \"description\": null\n        }\n      ],\n      \"menuId\": \"9\",\n      \"menuName\": \"Reports\"\n    },\n    {\n      \"components\": [],\n      \"menuId\": \"10\",\n      \"menuName\": \"Subscriber Management-Individual\"\n    },\n    {\n      \"components\": [],\n      \"menuId\": \"11\",\n      \"menuName\": \"NAS/BNG\"\n    },\n    {\n      \"components\": [],\n      \"menuId\": \"12\",\n      \"menuName\": \"Session History\"\n    },\n    {\n      \"components\": [\n        {\n          \"componentId\": \"10\",\n          \"componentName\": \"User List\",\n          \"description\": null\n        },\n        {\n          \"componentId\": \"11\",\n          \"componentName\": \"User Details\",\n          \"description\": null\n        }\n      ],\n      \"menuId\": \"13\",\n      \"menuName\": \"User\"\n    },\n    {\n      \"components\": [\n        {\n          \"componentId\": \"12\",\n          \"componentName\": \"Roles List\",\n          \"description\": null\n        },\n        {\n          \"componentId\": \"13\",\n          \"componentName\": \"Roles Details\",\n          \"description\": null\n        }\n      ],\n      \"menuId\": \"14\",\n      \"menuName\": \"Roles\"\n    },\n    {\n      \"components\": [\n        {\n          \"componentId\": \"14\",\n          \"componentName\": \"Permission Llist\",\n          \"description\": null\n        }\n      ],\n      \"menuId\": \"15\",\n      \"menuName\": \"Permissions\"\n    },\n    {\n      \"components\": [\n        {\n          \"componentId\": \"16\",\n          \"componentName\": \"Search Plans Details\",\n          \"description\": null\n        },\n        {\n          \"componentId\": \"24\",\n          \"componentName\": \"Search Plans List\",\n          \"description\": null\n        }\n      ],\n      \"menuId\": \"16\",\n      \"menuName\": \"Search Plans\"\n    },\n    {\n      \"components\": [\n        {\n          \"componentId\": \"17\",\n          \"componentName\": \"Qos Management List\",\n          \"description\": null\n        }\n      ],\n      \"menuId\": \"17\",\n      \"menuName\": \"QoS Management\"\n    },\n    {\n      \"components\": [\n        {\n          \"componentId\": \"18\",\n          \"componentName\": \"Bucket List Management \",\n          \"description\": null\n        }\n      ],\n      \"menuId\": \"18\",\n      \"menuName\": \"Bucket Management\"\n    },\n    {\n      \"components\": [\n        {\n          \"componentId\": \"19\",\n          \"componentName\": \"Message Log Details\",\n          \"description\": null\n        },\n        {\n          \"componentId\": \"20\",\n          \"componentName\": \"Message Logs List\",\n          \"description\": null\n        }\n      ],\n      \"menuId\": \"19\",\n      \"menuName\": \"Message Logs\"\n    },\n    {\n      \"components\": [\n        {\n          \"componentId\": \"22\",\n          \"componentName\": \"Error Logs List\",\n          \"description\": null\n        }\n      ],\n      \"menuId\": \"20\",\n      \"menuName\": \"Error Logs\"\n    },\n    {\n      \"components\": [\n        {\n          \"componentId\": \"26\",\n          \"componentName\": \"Notification Template\",\n          \"description\": null\n        },\n        {\n          \"componentId\": \"27\",\n          \"componentName\": \"Notification Template Details\",\n          \"description\": null\n        }\n      ],\n      \"menuId\": \"21\",\n      \"menuName\": \"Notification Template\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "dce311f0-0ec5-4ca0-892c-6cc7549e054b",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "airtel-aaa-aaa-secure-request-handler/srh/auth/user/login",
+      "responses": [
+        {
+          "uuid": "fe6d927e-6431-42a5-8455-269beccb1e0a",
+          "body": "{\n  \"data\": {\n    \"accessToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZW51cmkiLCJyZWZyZXNoVGltZVJhbmdlIjozNTAwLCJyb2xlIjoiU3VwZXIgQWRtaW4iLCJpZGxlVGltZVJhbmdlIjozNjAwLCJwZXJtaXNzaW9ucyI6eyJtZW51aWRzIjpbMSwyLDMsNCw1LDYsOSwxMCwxMSwxMiwxMywxNCwxNSwxNl0sImNvbXBvbmVudHMiOlt7ImlkIjoxLCJhY3Rpb25zIjpbMSwyLDQsNiw3LDgsMTEwLDExMV0sImF0dHJpYnV0ZXMiOltdfSx7ImlkIjo3LCJhY3Rpb25zIjpbMTIsMTQsMTYsMTddLCJhdHRyaWJ1dGVzIjpbXX0seyJpZCI6OCwiYWN0aW9ucyI6WzE5LDIwLDIxXSwiYXR0cmlidXRlcyI6W119LHsiaWQiOjExLCJhY3Rpb25zIjpbNDVdLCJhdHRyaWJ1dGVzIjpbXX0seyJpZCI6OSwiYWN0aW9ucyI6WzM3LDM4LDM5LDQwXSwiYXR0cmlidXRlcyI6W119LHsiaWQiOjgsImFjdGlvbnMiOlszMywzNCwzNSwzNl0sImF0dHJpYnV0ZXMiOltdfSx7ImlkIjoxMCwiYWN0aW9ucyI6WzIyLDIzLDEwLDQyLDQzLDQ0LDQ1LDQ2LDQ3LDExXSwiYXR0cmlidXRlcyI6W119XX0sInR0eXBlIjoiYWNjZXNzIiwibmFtZSI6IlNlbnVyaSIsImV4cCI6MTgwNzIwNTgzMSwiaWF0IjoxNzA3MTkzODMxLCJlbWFpbCI6InNlbnVyaUBheG9uZWN0Lm9ubWljcm9zb2Z0LmNvbSJ9.o5024tPKoejECXaeXxyMmriWqJMEY9FoO0sWdUWok30\"\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "12e843ec-2412-4b2d-8515-58b4761ee019",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "airtel-aaa-airtel-aaa-ums/ums/user-activity-log/get-log",
+      "responses": [
+        {
+          "uuid": "22a01630-e618-4840-acef-eea7a4343d71",
+          "body": "{\r\n  \"responseData\": {\r\n    \"logs\": [\r\n      {\r\n        \"adminUser\": \"Jhon Doe\",\r\n        \"activityType\": \"Login\",\r\n        \"dateTime\": \"2026-01-15T10:12:00Z\",\r\n        \"details\": \"User logged in from IP 203.0.113.5\"\r\n      },\r\n      {\r\n        \"adminUser\": \"Alice Smith\",\r\n        \"activityType\": \"UpdateProfile\",\r\n        \"dateTime\": \"2026-01-20T14:45:30Z\",\r\n        \"details\": \"Updated email address for user 12345\"\r\n      },\r\n      {\r\n        \"adminUser\": \"System\",\r\n        \"activityType\": \"CreateUser\",\r\n        \"dateTime\": \"2026-01-25T08:05:10Z\",\r\n        \"details\": \"Created user account for 'new.user@example.com'\"\r\n      }\r\n    ]\r\n  },\r\n  \"result\": {\r\n    \"resultCode\": \"0\",\r\n    \"resultDescription\": \"Success\",\r\n    \"pageDetail\": {\r\n      \"pageNumber\": 1,\r\n      \"pageElementCount\": 10,\r\n      \"totalRecords\": 3\r\n    }\r\n  }\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "99ffb623-904e-4968-b43d-749044efcac3",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "airtel-aaa-aaa-secure-request-handler/api/plans/approval/pending",
+      "responses": [
+        {
+          "uuid": "847a1cac-706f-4b9d-bdc9-91a0ff6057a6",
+          "body": "{\r\n    \"success\": true,\r\n    \"message\": \"Successfully Retrieved Pending Approvals\",\r\n    \"data\": {\r\n        \"approvals\": [\r\n            {\r\n                \"planId\": \"100COMBO11\",\r\n                \"approvalStatus\": \"PENDING_APPROVAL\",\r\n                \"currentApprovalLevel\": 1,\r\n                \"planStatus\": \"DRAFT\"\r\n            },\r\n            {\r\n                \"planId\": \"100COMBO12\",\r\n                \"approvalStatus\": \"PENDING_APPROVAL\",\r\n                \"currentApprovalLevel\": 2,\r\n                \"planStatus\": \"DRAFT\"\r\n            },\r\n            {\r\n                \"planId\": \"100COMBO13\",\r\n                \"approvalStatus\": \"PENDING_APPROVAL\",\r\n                \"currentApprovalLevel\": 1,\r\n                \"planStatus\": \"DRAFT\"\r\n            },\r\n            {\r\n                \"planId\": \"100COMBO14\",\r\n                \"approvalStatus\": \"PENDING_APPROVAL\",\r\n                \"currentApprovalLevel\": 3,\r\n                \"planStatus\": \"DRAFT\"\r\n            }\r\n        ],\r\n        \"pageDetails\": {\r\n            \"totalRecords\": 4,\r\n            \"pageNumber\": 0,\r\n            \"pageElementCount\": 1\r\n        }\r\n    }\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "df0d73a3-9fed-47b4-9bc5-4e2c4eadba7d",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "airtel-aaa-aaa-secure-request-handler/api/ums/permission/get-role-meta-data/meta-data",
+      "responses": [
+        {
+          "uuid": "7967460e-a1ff-4e8a-9f5d-e00f683bc5d9",
+          "body": "{\n  \"responseData\": [\n    {\n      \"label\": \"Admin\",\n      \"value\": \"1\"\n    },\n    {\n      \"label\": \"Super admin\",\n      \"value\": \"2\"\n    }\n  ],\n  \"result\": {\n    \"resultCode\": \"200\",\n    \"resultDescription\": \"success\",\n    \"pageDetail\": \"null\"\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "bde40ce9-1fea-4912-b2e5-b59b29cd44c8",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "airtel-aaa-aaa-secure-request-handler/api/ums/role/get-role-list",
+      "responses": [
+        {
+          "uuid": "2c7be46b-414b-4ada-b9fd-a55314941236",
+          "body": "{\n  \"responseData\": [\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    },\n    {\n      \"roleId\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"totalCount\": \"string\"\n    }\n  ],\n  \"result\": {\n    \"resultCode\": \"200\",\n    \"resultDescription\": \"success\",\n    \"pageDetail\": {\n      \"pageNumber\": 1,\n      \"pageElementCount\": 10,\n      \"totalRecords\": 16\n    }\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "9510e967-5292-4991-a620-c2aed6adffd5",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "airtel-aaa-user-provisioning-service/api/vendor-configs/search",
+      "responses": [
+        {
+          "uuid": "63f5d87a-ec43-4b96-aaab-edd8ffbdc92d",
+          "body": "{\n  \"success\": true,\n  \"message\": \"Vendor config records retrieved successfully\",\n  \"data\": {\n    \"pageDetails\": {\n      \"totalRecords\": 16,\n      \"pageNumber\": 1,\n      \"pageElementCount\": 10\n    },\n    \"VendorConfigData\": [\n      {\n        \"id\": 101,\n        \"vendorId\": \"VND0002\",\n        \"vendorName\": \"cisco\",\n        \"attributeName\": \"21212\",\n        \"attributeId\": \"2121\",\n        \"valuePath\": \"AAA_USER.CONCURRENCY\",\n        \"entity\": \"AAA_USER\",\n        \"dataType\": \"String\",\n        \"parameter\": \"CONCURRENCY\",\n        \"isActive\": true,\n        \"attributePrefix\": \"4534534\",\n        \"createdDate\": \"2026-02-20 08:51:53\",\n        \"createdBy\": \"Admin\",\n        \"lastUpdatedDate\": \"2026-02-20 08:51:53\",\n        \"lastUpdatedBy\": \"Admin\"\n      },\n      {\n        \"id\": 85,\n        \"vendorId\": \"deletetesting0005\",\n        \"vendorName\": \"deletetesting0005\",\n        \"attributeName\": \"balance\",\n        \"attributeId\": \"4\",\n        \"valuePath\": \"AAA_USER.CONTACT_EMAIL\",\n        \"entity\": \"AAA_USER\",\n        \"dataType\": \"e\",\n        \"parameter\": \"CONTACT_EMAIL\",\n        \"isActive\": true,\n        \"attributePrefix\": \"e\",\n        \"createdDate\": \"2026-02-19 17:59:07\",\n        \"createdBy\": \"Admin\",\n        \"lastUpdatedDate\": \"2026-02-19 17:59:07\",\n        \"lastUpdatedBy\": \"Admin\"\n      },\n      {\n        \"id\": 84,\n        \"vendorId\": \"deletetesting0004\",\n        \"vendorName\": \"deletetesting0004\",\n        \"attributeName\": \"deletetesting0004\",\n        \"attributeId\": \"deletetesting0004\",\n        \"valuePath\": \"AAA_USER.CONTACT_NAME\",\n        \"entity\": \"AAA_USER\",\n        \"dataType\": \"deletetesting0004\",\n        \"parameter\": \"CONTACT_NAME\",\n        \"isActive\": true,\n        \"attributePrefix\": \"deletetesting0004\",\n        \"createdDate\": \"2026-02-19 17:57:52\",\n        \"createdBy\": \"Admin\",\n        \"lastUpdatedDate\": \"2026-02-19 17:57:52\",\n        \"lastUpdatedBy\": \"Admin\"\n      },\n      {\n        \"id\": 61,\n        \"vendorId\": \"VND0002\",\n        \"vendorName\": \"Cisco\",\n        \"attributeName\": \"ConnectionLinit\",\n        \"attributeId\": \"C0001\",\n        \"valuePath\": \"SERVICE_INSTANCE.BILLING\",\n        \"entity\": \"SERVICE_INSTANCE\",\n        \"dataType\": \"String\",\n        \"parameter\": \"BILLING\",\n        \"isActive\": false,\n        \"attributePrefix\": \"Prifix001\",\n        \"createdDate\": \"2026-02-19 09:07:31\",\n        \"createdBy\": \"Admin\",\n        \"lastUpdatedDate\": \"2026-02-19 09:07:31\",\n        \"lastUpdatedBy\": \"Admin\"\n      },\n      {\n        \"id\": 51,\n        \"vendorId\": \"9o8\",\n        \"vendorName\": \"o91\",\n        \"attributeName\": \"o1\",\n        \"attributeId\": \"o91\",\n        \"valuePath\": \"AAA_USER.BANDWIDTH\",\n        \"entity\": \"AAA_USER\",\n        \"dataType\": \"o1\",\n        \"parameter\": \"BANDWIDTH\",\n        \"isActive\": true,\n        \"attributePrefix\": \"o1\",\n        \"createdDate\": \"2026-02-18 18:32:02\",\n        \"createdBy\": \"Admin\",\n        \"lastUpdatedDate\": \"2026-02-19 09:02:53\",\n        \"lastUpdatedBy\": \"Admin\"\n      },\n      {\n        \"id\": 50,\n        \"vendorId\": \"0\",\n        \"vendorName\": \"0\",\n        \"attributeName\": \"0\",\n        \"attributeId\": \"0\",\n        \"valuePath\": \"BUCKET_INSTANCE.CONSUMPTION_LIMIT_WINDOW\",\n        \"entity\": \"BUCKET_INSTANCE\",\n        \"dataType\": \"0\",\n        \"parameter\": \"CONSUMPTION_LIMIT_WINDOW\",\n        \"isActive\": false,\n        \"attributePrefix\": \"0\",\n        \"createdDate\": \"2026-02-18 18:31:26\",\n        \"createdBy\": \"Admin\",\n        \"lastUpdatedDate\": \"2026-02-18 18:31:26\",\n        \"lastUpdatedBy\": \"Admin\"\n      },\n      {\n        \"id\": 49,\n        \"vendorId\": \"9\",\n        \"vendorName\": \"9\",\n        \"attributeName\": \"9\",\n        \"attributeId\": \"9\",\n        \"valuePath\": \"SERVICE_INSTANCE.CYCLE_START_DATE\",\n        \"entity\": \"SERVICE_INSTANCE\",\n        \"dataType\": \"9\",\n        \"parameter\": \"CYCLE_START_DATE\",\n        \"isActive\": false,\n        \"attributePrefix\": \"9\",\n        \"createdDate\": \"2026-02-18 18:30:18\",\n        \"createdBy\": \"Admin\",\n        \"lastUpdatedDate\": \"2026-02-18 18:30:18\",\n        \"lastUpdatedBy\": \"Admin\"\n      },\n      {\n        \"id\": 48,\n        \"vendorId\": \"7\",\n        \"vendorName\": \"7\",\n        \"attributeName\": \"7\",\n        \"attributeId\": \"7\",\n        \"valuePath\": \"BUCKET_INSTANCE.CARRY_FORWARD\",\n        \"entity\": \"BUCKET_INSTANCE\",\n        \"dataType\": \"7\",\n        \"parameter\": \"CARRY_FORWARD\",\n        \"isActive\": true,\n        \"attributePrefix\": \"7\",\n        \"createdDate\": \"2026-02-18 18:28:34\",\n        \"createdBy\": \"Admin\",\n        \"lastUpdatedDate\": \"2026-02-18 18:28:34\",\n        \"lastUpdatedBy\": \"Admin\"\n      },\n      {\n        \"id\": 47,\n        \"vendorId\": \"j\",\n        \"vendorName\": \"j\",\n        \"attributeName\": \"j\",\n        \"attributeId\": \"j\",\n        \"valuePath\": \"SERVICE_INSTANCE.CYCLE_START_DATE\",\n        \"entity\": \"SERVICE_INSTANCE\",\n        \"dataType\": \"j\",\n        \"parameter\": \"CYCLE_START_DATE\",\n        \"isActive\": false,\n        \"attributePrefix\": \"j\",\n        \"createdDate\": \"2026-02-18 18:27:59\",\n        \"createdBy\": \"Admin\",\n        \"lastUpdatedDate\": \"2026-02-18 18:27:59\",\n        \"lastUpdatedBy\": \"Admin\"\n      },\n      {\n        \"id\": 1,\n        \"vendorId\": \"6527\",\n        \"vendorName\": \"Nokia\",\n        \"attributeName\": \"ALC_SLA_PROF_STR\",\n        \"attributeId\": \"13\",\n        \"valuePath\": \"BUCKET_INSTANCE.RULE\",\n        \"entity\": \"BUCKET_INSTANCE\",\n        \"dataType\": \"STRING\",\n        \"parameter\": \"RULE\",\n        \"isActive\": true,\n        \"attributePrefix\": null,\n        \"createdDate\": \"2026-02-18 18:27:59\",\n        \"createdBy\": \"Admin\",\n        \"lastUpdatedDate\": \"2026-02-18 18:27:59\",\n        \"lastUpdatedBy\": \"Admin\"\n      }\n    ]\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "3aa3eb20-aefc-4d09-a40e-38b061813e32",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "airtel-aaa-user-provisioning-service/api/entity-metadata/AAA_USER",
+      "responses": [
+        {
+          "uuid": "999c8c89-e168-4ad8-b2f5-1d03567da224",
+          "body": "{\n  \"success\": true,\n  \"message\": \"Columns retrieved successfully\",\n  \"data\": [\n    \"BANDWIDTH\",\n    \"BILLING\",\n    \"BILLING_ACCOUNT_REF\",\n    \"CIRCUIT_ID\",\n    \"CONCURRENCY\",\n    \"CONTACT_EMAIL\",\n    \"CONTACT_NAME\",\n    \"CONTACT_NUMBER\",\n    \"CREATED_DATE\",\n    \"CYCLE_DATE\",\n    \"ENCRYPTION_METHOD\",\n    \"GROUP_ID\",\n    \"IPV4\",\n    \"IPV6\",\n    \"IP_ALLOCATION\",\n    \"IP_POOL_NAME\",\n    \"NAS_PORT_TYPE\",\n    \"PASSWORD\",\n    \"REMOTE_ID\",\n    \"REQUEST_ID\",\n    \"SESSION_TIMEOUT\",\n    \"STATUS\",\n    \"SUBSCRIPTION\",\n    \"TEMPLATE_ID\",\n    \"UPDATED_DATE\",\n    \"USER_ID\",\n    \"USER_NAME\",\n    \"VLAN_ID\"\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "4043f203-2afa-4c4c-81d7-d99ca50e34bf",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "airtel-aaa-aaa-secure-request-handler/api/subscriber/search-subscriber",
+      "responses": [
+        {
+          "uuid": "39b38063-d496-4a1a-bd4e-b340aa5f9931",
+          "body": "{\n  \"success\": true,\n  \"code\": \"AAA_200_SUCCESS\",\n  \"message\": \"User list retrieved successfully\",\n  \"timestamp\": \"2026-02-20T08:03:56.712646446Z\",\n  \"data\": {\n    \"page\": 1,\n    \"page_size\": 10,\n    \"total_records\": 266,\n    \"users\": [\n      {\n        \"user_id\": \"USR17694016356885036\",\n        \"encryption_method\": 1,\n        \"user_name\": \"MAC_60\",\n        \"nas_port_type\": \"PPPoE\",\n        \"group_id\": \"8\",\n        \"bandwidth\": \"75Mbps\",\n        \"vlan_id\": \"65\",\n        \"circuit_id\": \"CIR-3001\",\n        \"remote_id\": \"REM-3001\",\n        \"mac_address\": \"44-44-44-44-44-54\",\n        \"ip_allocation\": \"DHCP\",\n        \"ip_pool_name\": \"DEFAULT_POOL\",\n        \"ipv4\": null,\n        \"ipv6\": null,\n        \"status\": 1,\n        \"contact_name\": \"Alicetest Brown\",\n        \"contact_email\": \"alicqe@example.com\",\n        \"contact_number\": \"+94111222333\",\n        \"concurrency\": 1,\n        \"billing\": \"2\",\n        \"cycle_date\": 8,\n        \"billing_account_ref\": \"BA-3001\",\n        \"session_timeout\": \"86400\",\n        \"request_id\": \"req-success-1477\",\n        \"subscription\": 0,\n        \"template_name\": \"Welcome Template\",\n        \"created_timestamp\": \"2026-01-26 04:27:15\",\n        \"last_updated_timestamp\": null\n      },\n      {\n        \"user_id\": \"USR17694030054282145\",\n        \"encryption_method\": 1,\n        \"user_name\": \"MAC_61\",\n        \"nas_port_type\": \"PPPoE\",\n        \"group_id\": \"85\",\n        \"bandwidth\": \"75Mbps\",\n        \"vlan_id\": \"65\",\n        \"circuit_id\": \"CIR-3001\",\n        \"remote_id\": \"REM-3001\",\n        \"mac_address\": \"44-44-44-44-44-55\",\n        \"ip_allocation\": \"DHCP\",\n        \"ip_pool_name\": \"DEFAULT_POOL\",\n        \"ipv4\": null,\n        \"ipv6\": null,\n        \"status\": 1,\n        \"contact_name\": \"Alicetest Brown\",\n        \"contact_email\": \"alicqe@example.com\",\n        \"contact_number\": \"+94111222333\",\n        \"concurrency\": 1,\n        \"billing\": \"2\",\n        \"cycle_date\": 8,\n        \"billing_account_ref\": \"BA-3001\",\n        \"session_timeout\": \"86400\",\n        \"request_id\": \"req-success-1478\",\n        \"subscription\": 0,\n        \"template_name\": \"Welcome Template\",\n        \"created_timestamp\": \"2026-01-26 04:50:05\",\n        \"last_updated_timestamp\": null\n      },\n      {\n        \"user_id\": \"USR17694030194727205\",\n        \"encryption_method\": 1,\n        \"user_name\": \"MAC_62\",\n        \"nas_port_type\": \"PPPoE\",\n        \"group_id\": \"85\",\n        \"bandwidth\": \"75Mbps\",\n        \"vlan_id\": \"65\",\n        \"circuit_id\": \"CIR-3001\",\n        \"remote_id\": \"REM-3001\",\n        \"mac_address\": \"44-44-44-44-44-56\",\n        \"ip_allocation\": \"DHCP\",\n        \"ip_pool_name\": \"DEFAULT_POOL\",\n        \"ipv4\": null,\n        \"ipv6\": null,\n        \"status\": 1,\n        \"contact_name\": \"Alicetest Brown\",\n        \"contact_email\": \"alicqe@example.com\",\n        \"contact_number\": \"+94111222333\",\n        \"concurrency\": 1,\n        \"billing\": \"2\",\n        \"cycle_date\": 8,\n        \"billing_account_ref\": \"BA-3001\",\n        \"session_timeout\": \"86400\",\n        \"request_id\": \"req-success-1479\",\n        \"subscription\": 0,\n        \"template_name\": \"Welcome Template\",\n        \"created_timestamp\": \"2026-01-26 04:50:19\",\n        \"last_updated_timestamp\": null\n      },\n      {\n        \"user_id\": \"USR17694032656461353\",\n        \"encryption_method\": 1,\n        \"user_name\": \"MAC_63\",\n        \"nas_port_type\": \"PPPoE\",\n        \"group_id\": \"90\",\n        \"bandwidth\": \"75Mbps\",\n        \"vlan_id\": \"65\",\n        \"circuit_id\": \"CIR-3001\",\n        \"remote_id\": \"REM-3001\",\n        \"mac_address\": \"44-44-44-44-44-57\",\n        \"ip_allocation\": \"DHCP\",\n        \"ip_pool_name\": \"DEFAULT_POOL\",\n        \"ipv4\": null,\n        \"ipv6\": null,\n        \"status\": 1,\n        \"contact_name\": \"Alicetest Brown\",\n        \"contact_email\": \"alicqe@example.com\",\n        \"contact_number\": \"+94111222333\",\n        \"concurrency\": 1,\n        \"billing\": \"2\",\n        \"cycle_date\": 7,\n        \"billing_account_ref\": \"BA-3001\",\n        \"session_timeout\": \"86400\",\n        \"request_id\": \"req-success-1480\",\n        \"subscription\": 0,\n        \"template_name\": \"Welcome Template\",\n        \"created_timestamp\": \"2026-01-26 04:54:25\",\n        \"last_updated_timestamp\": \"2026-02-09 20:00:39\"\n      },\n      {\n        \"user_id\": \"USR17694862275679396\",\n        \"encryption_method\": 1,\n        \"user_name\": \"MAC_640\",\n        \"nas_port_type\": \"PPPoE\",\n        \"group_id\": \"90\",\n        \"bandwidth\": \"75Mbps\",\n        \"vlan_id\": \"65\",\n        \"circuit_id\": \"CIR-3001\",\n        \"remote_id\": \"REM-3001\",\n        \"mac_address\": \"44-44-44-44-44-58\",\n        \"ip_allocation\": \"DHCP\",\n        \"ip_pool_name\": \"DEFAULT_POOL\",\n        \"ipv4\": null,\n        \"ipv6\": null,\n        \"status\": 1,\n        \"contact_name\": \"Alicetest Brown\",\n        \"contact_email\": \"alicqe@example.com\",\n        \"contact_number\": \"+94111222333\",\n        \"concurrency\": 1,\n        \"billing\": \"2\",\n        \"cycle_date\": 7,\n        \"billing_account_ref\": \"BA-3001\",\n        \"session_timeout\": \"86400\",\n        \"request_id\": \"req-success-1481\",\n        \"subscription\": 0,\n        \"template_name\": \"Welcome Template\",\n        \"created_timestamp\": \"2026-01-27 03:57:07\",\n        \"last_updated_timestamp\": \"2026-02-09 20:00:39\"\n      },\n      {\n        \"user_id\": \"USR17694862432521494\",\n        \"encryption_method\": 1,\n        \"user_name\": \"MAC_641\",\n        \"nas_port_type\": \"PPPoE\",\n        \"group_id\": \"90\",\n        \"bandwidth\": \"75Mbps\",\n        \"vlan_id\": \"65\",\n        \"circuit_id\": \"CIR-3001\",\n        \"remote_id\": \"REM-3001\",\n        \"mac_address\": \"44-44-44-44-44-59\",\n        \"ip_allocation\": \"DHCP\",\n        \"ip_pool_name\": \"DEFAULT_POOL\",\n        \"ipv4\": null,\n        \"ipv6\": null,\n        \"status\": 1,\n        \"contact_name\": \"Alicetest Brown\",\n        \"contact_email\": \"alicqe@example.com\",\n        \"contact_number\": \"+94111222333\",\n        \"concurrency\": 1,\n        \"billing\": \"2\",\n        \"cycle_date\": 7,\n        \"billing_account_ref\": \"BA-3001\",\n        \"session_timeout\": \"86400\",\n        \"request_id\": \"req-success-1482\",\n        \"subscription\": 0,\n        \"template_name\": \"Welcome Template\",\n        \"created_timestamp\": \"2026-01-27 03:57:23\",\n        \"last_updated_timestamp\": \"2026-02-09 20:00:39\"\n      },\n      {\n        \"user_id\": \"USR17694987308315848\",\n        \"encryption_method\": 0,\n        \"user_name\": \"testN\",\n        \"nas_port_type\": \"PPPoE\",\n        \"group_id\": \"1\",\n        \"bandwidth\": \"100\",\n        \"vlan_id\": null,\n        \"circuit_id\": null,\n        \"remote_id\": null,\n        \"mac_address\": \"0123456789AD, 0123.4567.89AE, 01:23:45:67:89:AC, 01-23-45-67-89-AB\",\n        \"ip_allocation\": null,\n        \"ip_pool_name\": null,\n        \"ipv4\": null,\n        \"ipv6\": null,\n        \"status\": 1,\n        \"contact_name\": \"john5\",\n        \"contact_email\": null,\n        \"contact_number\": null,\n        \"concurrency\": 1,\n        \"billing\": \"2\",\n        \"cycle_date\": null,\n        \"billing_account_ref\": null,\n        \"session_timeout\": \"86400\",\n        \"request_id\": \"42e0c8e1-d371-4e35-94e3-a8a4f132ccbe\",\n        \"subscription\": 2,\n        \"template_name\": \"Usage Template 1\",\n        \"created_timestamp\": \"2026-01-27 07:25:30\",\n        \"last_updated_timestamp\": \"2026-01-30 05:41:54\"\n      },\n      {\n        \"user_id\": \"USR17695812718653597\",\n        \"encryption_method\": 0,\n        \"user_name\": \"MAC_652\",\n        \"nas_port_type\": \"PPPoE\",\n        \"group_id\": \"100\",\n        \"bandwidth\": \"75Mbps\",\n        \"vlan_id\": \"65\",\n        \"circuit_id\": \"CIR-3001\",\n        \"remote_id\": \"REM-3001\",\n        \"mac_address\": \"44-44-44-44-44-71\",\n        \"ip_allocation\": \"DHCP\",\n        \"ip_pool_name\": \"DEFAULT_POOL\",\n        \"ipv4\": null,\n        \"ipv6\": null,\n        \"status\": 1,\n        \"contact_name\": \"Alicetest Brown\",\n        \"contact_email\": \"alicqe@example.com\",\n        \"contact_number\": \"+94111222333\",\n        \"concurrency\": 1,\n        \"billing\": \"2\",\n        \"cycle_date\": 8,\n        \"billing_account_ref\": \"BA-3001\",\n        \"session_timeout\": \"86400\",\n        \"request_id\": \"req-success-1493\",\n        \"subscription\": 2,\n        \"template_name\": \"Welcome Template\",\n        \"created_timestamp\": \"2026-01-28 06:21:11\",\n        \"last_updated_timestamp\": null\n      },\n      {\n        \"user_id\": \"USR17695814604764359\",\n        \"encryption_method\": 2,\n        \"user_name\": \"MAC_654\",\n        \"nas_port_type\": \"PPPoE\",\n        \"group_id\": \"100\",\n        \"bandwidth\": \"75Mbps\",\n        \"vlan_id\": \"65\",\n        \"circuit_id\": \"CIR-3001\",\n        \"remote_id\": \"REM-3001\",\n        \"mac_address\": \"44-44-44-44-44-73\",\n        \"ip_allocation\": \"DHCP\",\n        \"ip_pool_name\": \"DEFAULT_POOL\",\n        \"ipv4\": null,\n        \"ipv6\": null,\n        \"status\": 1,\n        \"contact_name\": \"Alicetest Brown\",\n        \"contact_email\": \"alicqe@example.com\",\n        \"contact_number\": \"+94111222333\",\n        \"concurrency\": 1,\n        \"billing\": \"2\",\n        \"cycle_date\": 8,\n        \"billing_account_ref\": \"BA-3001\",\n        \"session_timeout\": \"86400\",\n        \"request_id\": \"req-success-1495\",\n        \"subscription\": 2,\n        \"template_name\": \"Welcome Template\",\n        \"created_timestamp\": \"2026-01-28 06:24:20\",\n        \"last_updated_timestamp\": null\n      },\n      {\n        \"user_id\": \"USR17695854051284717\",\n        \"encryption_method\": 2,\n        \"user_name\": \"AABLTUSER030\",\n        \"nas_port_type\": \"PPPoE\",\n        \"group_id\": \"1\",\n        \"bandwidth\": null,\n        \"vlan_id\": \"1234\",\n        \"circuit_id\": \"12367\",\n        \"remote_id\": \"1234\",\n        \"mac_address\": \"ab0000000001\",\n        \"ip_allocation\": \"static\",\n        \"ip_pool_name\": null,\n        \"ipv4\": \"192.168.10.20\",\n        \"ipv6\": \"fe80::0202:b3ff:fe1e:8329\",\n        \"status\": 1,\n        \"contact_name\": null,\n        \"contact_email\": null,\n        \"contact_number\": null,\n        \"concurrency\": 1,\n        \"billing\": \"2\",\n        \"cycle_date\": null,\n        \"billing_account_ref\": null,\n        \"session_timeout\": \"86400\",\n        \"request_id\": \"LQEST030\",\n        \"subscription\": 0,\n        \"template_name\": \"Welcome Template\",\n        \"created_timestamp\": \"2026-01-28 07:30:05\",\n        \"last_updated_timestamp\": null\n      }\n    ]\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "8f29bb55-a247-4a7f-b5d0-48a1a9285242",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "airtel-aaa-aaa-secure-request-handler/api/ums/permission/get-status-meta-data/meta-data",
+      "responses": [
+        {
+          "uuid": "d17b0111-e7c0-4336-ad58-fc46c2418ed2",
+          "body": "{\n  \"responseData\": [\n    {\n      \"label\": \"Admin\",\n      \"value\": \"1\"\n    },\n    {\n      \"label\": \"Super admin\",\n      \"value\": \"2\"\n    }\n  ],\n  \"result\": {\n    \"resultCode\": \"200\",\n    \"resultDescription\": \"success\",\n    \"pageDetail\": \"null\"\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "5946e1e4-fe89-4a9f-8b2d-6b9c1e216cd4",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "airtel-aaa-aaa-secure-request-handler/api/ums/user/get-user-details/string",
+      "responses": [
+        {
+          "uuid": "9cc5640c-7f6b-450f-963d-90904cf01283",
+          "body": "{\n  \"result\": {\n    \"resultCode\": \"00\",\n    \"resultDescription\": \"SUCCESSFUL\",\n    \"pageDetail\": null\n  },\n  \"responseData\": {\n    \"lastLoginDateTime\": \"2026-02-23 09:07:01.758101131\",\n    \"mobileNumber\": null,\n    \"roleId\": \"3\",\n    \"name\": \"AAA FE DUU\",\n    \"roleName\": \"Super Admin Test\",\n    \"userId\": \"1\",\n    \"email\": \"aaafe@axonect.onmicrosoft.com\",\n    \"status\": \"Active\",\n    \"userAccount\": null,\n    \"userType\": null,\n    \"defaultGroup\": null,\n    \"associatedUserGroup\": null,\n    \"createdBy\": null,\n    \"createdDate\": \"2026-01-08 16:25:20\"\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "f0a2728d-4241-40d2-8b06-a9294801995d",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "airtel-aaa-aaa-secure-request-handler/api/bng-management/search-bng",
+      "responses": [
+        {
+          "uuid": "8d10e3c0-57c5-410f-b403-77aa2972e767",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [],
+  "proxyResHeaders": [],
+  "data": [],
+  "callbacks": []
+}

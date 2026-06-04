@@ -1,0 +1,15 @@
+export enum ConfigNamesEnumModel {
+    OTPLength = "OTPLength",
+    OTPValidity = "OTPValidity",
+    OTPRetryCount = "OTPRetryCount",
+    OTPValidityList = "OTPValidityList",
+    OTPLengthList = "OTPLengthList",
+    OTPRetryCountList = "OTPRetryCountList",
+    MinRechargeValue = "MinRechargeValue",
+    MaxRechargeValue = "MaxRechargeValue",
+    MsisdnValidationRegex = "MsisdnValidationRegex",
+    BalanceTransferPINLength = "BalanceTransferPINLength",
+    IdNumberMaxLength = "IdNumberMaxLength",
+    RefreshTokenRequestTimeRangeInSeconds = "RefreshTokenRequestTimeRangeInSeconds",
+    Version = "Version",
+}

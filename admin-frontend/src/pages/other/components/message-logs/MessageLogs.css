@@ -1,0 +1,51 @@
+.search-container {
+    margin-top: 0px;
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 6px 16px;
+}
+
+.message-count-badge {
+    display: flex;
+    align-items: center;
+    background: #F3F7EF;
+    border-radius: 6px;
+    padding: 6px 16px 6px 0;
+    font-weight: 600;
+    font-size: 16px;
+    color: #222;
+    height: 32px;
+}
+
+.count-indicator {
+    width: 8px;
+    height: 32px;
+    background: #4A802D ;
+    border-radius: 4px 0 0 4px;
+    margin-right: 12px;
+    margin-left: 0;
+}
+
+.count-number {
+    margin-left: 8px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.success-icon {
+    margin-left: 20px;
+    background: #4A802D ;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

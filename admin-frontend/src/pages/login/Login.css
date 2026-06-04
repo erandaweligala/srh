@@ -1,0 +1,90 @@
+
+
+.login-page{
+
+    width: 100%;
+
+    .image-wrapper{
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .leftImg {
+        margin: 0 auto;
+    }
+
+    .logo {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 150px;
+        height: auto;
+        z-index: 10;
+    }
+      
+    .details-container{
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+        background: #FAFAFA;
+        display: flex;
+    }
+
+    .hello-there{
+        font-size: 28px;
+        font-weight: 400;
+        color: #000000;
+    }
+    .welcome-to{
+        font-size: 36px;
+        font-weight: 500;
+        color: #000000;
+    }
+    .digital-telco{
+        white-space: pre;
+        color: #15416E;
+        font-size: 36px;
+        font-weight: 600;
+    }
+    .ant-checkbox-checked .ant-checkbox-inner {
+        background-color: #000000;
+        border-color: #000000;
+    }
+    .login-btn{
+        background: #005B9E1A 0% 0% no-repeat padding-box;
+        box-shadow: 0px 0px 15px #15416E14;
+        border: 2px solid #005B9E33;
+        border-radius: 4px;
+        height: 44px;
+        color: #15416E;
+        letter-spacing: 1.25px;
+        opacity: 1;
+        width: 100%;
+        font-weight: 600;
+    }
+    .link{
+        color: #000000;
+    }
+    .account{
+        white-space: pre;
+    }
+
+    .title-container {
+        margin-bottom: 100px;
+    }
+    .aaa-text {
+        font-size: 37px;
+        line-height: 42px;
+        font-weight: normal;
+        color: #000000;
+        text-align: left;
+        width: 84px;
+        height: 42px;
+    }
+    .admin-console-text {
+        font-size: 38px;
+        line-height: 57px;
+        font-weight: 400;
+        color: #000000;
+    }
+}

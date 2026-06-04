@@ -1,0 +1,122 @@
+@import './../../styles/Variables.css';
+
+.common-status-tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .status-tag{
+        height: 20px;
+        border-radius: var(--border-radius);
+        padding: 2px 5px;
+        width: fit-content;
+        min-width: 90px;
+        white-space: nowrap;
+    }
+
+    .active {
+        color: #4EC300;
+        background-color: rgba(78, 195, 0, 0.1);
+    }
+    
+    .inactive {
+        color: #FF5A56;
+        background-color: rgba(255, 90, 86, 0.1);
+    }
+    
+    .pending {
+        color: #FF8E00;
+        background-color: rgba(255, 142, 0, 0.1);
+    }
+    
+    .blocked {
+        color: #ff0000;
+        background-color: rgba(255, 0, 0, 0.1);
+    }
+    
+    .deleted {
+        color: #ED665D;
+        background-color: rgba(237, 102, 93, 0.1);
+    }
+    
+    .expired {
+        color: #0090BC;
+        background-color: rgba(0, 144, 188, 0.1);
+    }
+    
+    .completed {
+        color: #17BA98;
+        background-color: rgba(23, 186, 152, 0.1);
+    }
+
+    .no_status {
+        color: #9182A5;
+        background-color: rgba(23, 186, 152, 0.1);
+    }
+    
+    .inprogress {
+        color: #9999BC;
+        background-color: rgba(153, 153, 188, 0.1);
+    }
+
+    .success {
+        color: #4EC300;
+        background-color: rgba(78, 195, 0, 0.1);
+    }
+
+    .approved {
+        color: #4EC300;
+        background-color: rgba(78, 195, 0, 0.1);
+    }
+    
+    .failed {
+        color: #dc3545;
+        background-color: rgba(220, 53, 69, 0.1);
+    }
+
+    .rejected {
+        color: #ff0000;
+        background-color: rgba(255, 0, 0, 0.1);
+    }
+
+    .terminated {
+        color: #ca5252;
+        background-color: rgba(220, 53, 69, 0.1);
+    }
+
+    .processing {
+        color: #FF8E00;
+        background-color: rgba(255, 142, 0, 0.1);
+    }
+
+    .closed {
+        color: #9182A5;
+        background-color: rgba(153, 153, 188, 0.1);
+    }
+
+    .suspended {
+        color: #ff0000;
+        background-color: rgba(255, 0, 0, 0.1);
+    }
+
+    .draft {
+        color: #9182A5;
+        background-color: rgba(23, 186, 152, 0.1);
+    }
+
+    .barred {
+        color: #ff0000;
+        background-color: rgba(255, 0, 0, 0.1);
+    }
+
+    .termination_requested {
+        color: #FFA726;
+        background-color: rgba(255, 167, 38, 0.1);
+    }
+
+    .no_records {
+        color: #9182A5;
+        background-color: rgba(23, 186, 152, 0.1);
+    }
+}

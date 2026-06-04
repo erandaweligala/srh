@@ -1,0 +1,36 @@
+
+.common-breadcrumb {
+
+  height: 38px;
+  border-bottom: var(--primary-border);
+  padding: 4px 40px 4px 40px;
+  display: flex;
+  align-items: center;
+  background: var(--primary-background-color);
+  font-size: 12px;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+
+  .breadcrumb-section-children{
+
+    color: var(--primary-font-color);
+
+    .section {
+      padding: 0 8px;
+    }
+
+    .last-section .section {
+      color: #1890FF;
+    }
+
+    .clickable-section {
+      cursor: pointer;
+    }
+  }
+}
+
+.right-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

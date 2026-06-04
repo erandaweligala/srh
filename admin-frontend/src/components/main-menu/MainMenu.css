@@ -1,0 +1,299 @@
+
+
+.main-menu-container {
+  height: 56px;
+  background: transparent linear-gradient(90deg, #1E6059 0%, #093D71 100%) 0% 0% no-repeat padding-box;
+  box-shadow: 0 3px 10px #0000000D;
+  display: flex;
+
+  /* Stick Menu to top */
+  /* position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  margin-bottom: 10px;
+  End */
+
+  .logo-container {
+    width: 180px;
+    align-self: center;
+    margin-left: 10px;
+    .logo {
+      height: 31px;
+    }
+  }
+
+    .logo-img {
+        top: 8px;
+        left: 39px;
+        width: 47px;
+        height: 38px;
+        display: block;
+        object-fit: contain;
+        opacity: 1;
+        background-color: transparent;
+    }
+
+  .logout-notification-settings {
+    margin-left: auto;
+    padding-right: 20px;
+    align-self: center;
+
+    display: inline-flex;
+    align-items: stretch;
+    gap: 12px;
+    box-sizing: border-box;
+  }
+}
+
+.ant-menu {
+  font-size: 12px;
+  font-weight: var(--font-weight-regular);
+}
+
+.ant-menu .ant-menu-item,
+.ant-menu .ant-menu-submenu,
+.ant-menu .ant-menu-submenu-title {
+  border-radius: 0;
+}
+
+.ant-menu-horizontal {
+  line-height: 56px;
+  background-color: transparent;
+  color: white;
+  font-size: 12px;
+}
+
+.name-label {
+  color: white;
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, 0.1607843137);
+  border: 1px solid rgba(247, 247, 247, 0.2);
+  border-radius: 4px;
+  padding: 0 8px 0 8px;
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-menu-trigger {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  line-height: 28px;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid rgba(247, 247, 247, 0.2);
+}
+
+/* Defensive: hide any injected caret/arrow */
+.user-menu-trigger::after,
+.user-menu-trigger::before {
+  content: none !important;
+}
+
+.user-menu-trigger:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.65);
+  outline-offset: 2px;
+}
+
+.white-square-btn {
+  background-color: rgba(255, 255, 255, 0.1607843137);
+  font-size: var(--font-size-md);
+  height: 24px;
+  width: 24px;
+  padding: 0;
+  border-radius: var(--border-radius);
+}
+
+.down-outlined-icon {
+  height: 24px;
+  padding: 0;
+}
+
+.ant-menu-light.ant-menu-horizontal >.ant-menu-item-selected,
+.ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-selected {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.16);
+}
+
+.ant-menu-light .ant-menu-submenu-selected >.ant-menu-submenu-title {
+  color: white;
+}
+
+.ant-menu-light .ant-menu-submenu-title:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) {
+  color: white;
+}
+
+/* Main menu item with no children hover effect */
+.ant-menu-light .ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) {
+  color: white;
+}
+
+/* To remove main menu item blue bottom border */
+.ant-menu-light.ant-menu-horizontal >.ant-menu-item:hover::after,
+.ant-menu-light.ant-menu-horizontal >.ant-menu-item-active:hover::after,
+.ant-menu-light.ant-menu-horizontal >.ant-menu-item-selected::after,
+.ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-selected::after,
+.ant-menu-light.ant-menu-horizontal >.ant-menu-submenu:hover::after,
+.ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-active:hover::after,
+.ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-open:hover::after,
+.ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-active::after,
+.ant-menu-light.ant-menu-horizontal >.ant-menu-submenu-open::after
+{
+  border-bottom-color: transparent;
+  border-bottom-width: 0;
+}
+
+/* ////////////////////
+// Submenu styling//
+//////////////////// */
+
+.ant-menu-submenu-popup .ant-menu-vertical >.ant-menu-item,
+.ant-menu-submenu-popup .ant-menu-vertical >.ant-menu-submenu>.ant-menu-submenu-title {
+  height: 32px;
+  line-height: 32px;
+}
+
+.ant-menu-light.ant-menu-submenu>.ant-menu {
+  background: transparent linear-gradient(90deg, #1E6059 0%, #093D71 100%) 0% 0% no-repeat padding-box;
+}
+
+.ant-menu-light .ant-menu-item-selected {
+  background-color: rgba(255, 255, 255, 0.16);
+    color: white;
+}
+
+.ant-menu-light,
+.ant-menu-light > .ant-menu{
+  color: white;
+}
+
+
+
+.ant-menu-submenu >.ant-menu {
+  border-radius: 0;
+}
+
+.ant-menu-submenu >.ant-menu .ant-menu-item,
+.ant-menu-submenu >.ant-menu .ant-menu-submenu>.ant-menu-submenu-title {
+  border-radius: 0;
+}
+
+.ant-menu-submenu-popup .ant-menu-vertical .ant-menu-item,
+.ant-menu-submenu-popup .ant-menu-vertical .ant-menu-submenu-title {
+  margin-inline: 0;
+  margin-block: 0;
+  width: 100%;
+}
+
+
+/* +++ */
+.ant-menu-light:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover,
+.ant-menu-light>.ant-menu:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* +++ */
+.ant-menu-light:not(.ant-menu-horizontal) .ant-menu-submenu-title:hover,
+.ant-menu-light>.ant-menu:not(.ant-menu-horizontal) .ant-menu-submenu-title:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* +++ */
+.ant-menu-light .ant-menu-item-selected,
+.ant-menu-light>.ant-menu .ant-menu-item-selected,
+.ant-menu-light>.ant-menu .ant-menu-submenu-selected {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* +++ */
+.ant-menu-light .ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected),
+.ant-menu-light>.ant-menu .ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected),
+.ant-menu-light .ant-menu-submenu-title:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected),
+.ant-menu-light>.ant-menu .ant-menu-submenu-title:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) {
+  color: white;
+}
+
+/* +++ */
+.ant-menu-light .ant-menu-item-selected,
+.ant-menu-light>.ant-menu .ant-menu-item-selected {
+  color: white;
+}
+
+/* +++ */
+.ant-menu-light .ant-menu-submenu-selected >.ant-menu-submenu-title,
+.ant-menu-light>.ant-menu .ant-menu-submenu-selected >.ant-menu-submenu-title {
+  color: white;
+}
+
+/* +++ */
+.ant-menu.ant-menu-sub.ant-menu-vertical {
+  margin-left: -15px;
+}
+
+/* +++ */
+.ant-menu-submenu.ant-menu-submenu-popup.ant-menu.ant-menu-light {
+  background: transparent;
+}
+
+.ant-menu-submenu-popup .ant-menu-vertical .ant-menu-item:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.logo-text {
+    font-size: 40px;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-sub-text {
+    font-size: 12px;
+    font-weight: 100;
+    color: #ffffff;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 4px;
+}
+
+/* keep bell in flow so it doesn't overlap the name */
+.notification-bell {
+    position: relative; /* not absolute so it stays in flow */
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.1607843137);
+    border: 1px solid rgba(247, 247, 247, 0.2);
+    border-radius: 4px;
+    margin: 0;
+    flex: 0 0 auto;
+}
+
+.notification-bell .ant-badge-count {
+    background-color: #D66868;
+    color: #FFFFFF;
+    font-size: 12px;
+    width: 16px;
+    height: 16px;
+    line-height: 14px;
+    border-radius: 50%;
+    top: -4px;
+    right: -4px;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+}

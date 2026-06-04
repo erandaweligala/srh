@@ -1,0 +1,30 @@
+export interface SubscriberUpdateModel {
+    userName: string;
+    password?: string;
+    encryptionMethod?: number;
+    status?: number;
+    groupId?: string;
+    bandwidth?: string;
+    contactName?: string;
+    contactEmail?: string[];
+    contactNumber?: string[];
+    billingAccountRef?: string[];
+    billing?: number;
+    concurrency?: number;
+    cycleDate?: number;
+    timeout?: string;
+    sessionTimeout?: string;
+    idleTimeout?: string;
+    customTimeout?: string;
+    nasPortType?: string;
+    vlanId?: string;
+    circuitId?: string;
+    remoteId?: string;
+    macAddress?: string[];
+    ipAllocation?: string;
+    ipPoolName?: string;
+    ipv4?: string;
+    ipv6?: string;
+    subscription?: number;
+    templateId?: number;
+}

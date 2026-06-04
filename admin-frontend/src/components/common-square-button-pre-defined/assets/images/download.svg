@@ -1,0 +1,9 @@
+<svg id="Upload" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+  <g id="Group_44711" data-name="Group 44711" transform="translate(17 17) rotate(180)">
+    <rect id="Rectangle_17684" data-name="Rectangle 17684" width="17" height="17" fill="rgba(217,217,217,0)"/>
+    <g id="Group_44712" data-name="Group 44712" transform="translate(13.416 13.09) rotate(180)">
+      <path id="Path_33408" data-name="Path 33408" d="M.36,0a.36.36,0,0,1,.36.36V3.871a.36.36,0,0,0,.36.36H8.752a.36.36,0,0,0,.36-.36V.36a.36.36,0,1,1,.719,0V3.871A1.079,1.079,0,0,1,8.752,4.95H1.079A1.079,1.079,0,0,1,0,3.871V.36A.36.36,0,0,1,.36,0Z" transform="translate(0 4.23)" fill="#005b9e" fill-rule="evenodd"/>
+      <path id="Path_33409" data-name="Path 33409" d="M2.494,7.123a.36.36,0,0,0,.509,0L5.5,4.628a.36.36,0,1,0-.509-.508L3.108,6V.36a.36.36,0,0,0-.719,0V6L.614,4.227a.36.36,0,1,0-.508.509Z" transform="translate(2.278)" fill="#005b9e" fill-rule="evenodd"/>
+    </g>
+  </g>
+</svg>
