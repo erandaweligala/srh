@@ -117,6 +117,50 @@ class CredentialUserAuthenticationServiceImplTest {
 
 
     @Test
+    void testLogin_TakesOverExistingSession() throws BaseException {
+        // Setup - a session already exists for this user (e.g. login from another device/browser).
+        // Last-login-wins: login should succeed and overwrite the session marker with a new token
+        // rather than being rejected, which invalidates the previous session.
+        String requestVerificationToken = "otherBrowserToken";
+        CredentialUserLoginRequest loginRequest = new CredentialUserLoginRequest();
+        loginRequest.setTenant("tenant1");
+        loginRequest.setClientId("client123");
+
+        String rawUsername = "mockUser@email.com";
+        String extractedUsername = "mockUser";
+
+        CredentialUserAuthenticationServiceImpl spyService = Mockito.spy(
+                new CredentialUserAuthenticationServiceImpl(jwtService, cacheRepository, umsUserClient, responseHandler));
+
+        CommonSouthBoundResponse<String> umsResponse = new CommonSouthBoundResponse<>();
+        umsResponse.setResponseData(rawUsername);
+        doReturn(umsResponse).when(umsUserClient).getUserName(any(CredentialUserLoginRequest.class));
+
+        when(cacheRepository.existsByUserId(extractedUsername)).thenReturn(true);
+
+        Map<String, String> mockAccessTokenMap = new HashMap<>();
+        mockAccessTokenMap.put(ServiceConstants.TOKEN, "mockAccessToken");
+        doReturn(mockAccessTokenMap).when(spyService).createAccessToken(extractedUsername, loginRequest.getTenant());
+
+        doNothing().when(cacheRepository).deleteKey(anyString());
+        doNothing().when(cacheRepository).save(anyString(), anyString(), anyLong());
+
+        when(responseHandler.responseBuilder(any(), anyString(), anyString()))
+                .thenReturn(new CommonNorthBoundResponse<>());
+
+        ReflectionTestUtils.setField(spyService, "tempTokenPrefix", "temp_");
+        ReflectionTestUtils.setField(spyService, "prefixAC", "ac_");
+        ReflectionTestUtils.setField(spyService, "timeLimitAC", 1000L);
+
+        CommonNorthBoundResponse<AccessTokenResponse> response = spyService.login(requestVerificationToken, loginRequest);
+
+        assertNotNull(response);
+        // A fresh verification token is written, overwriting the previous session's token.
+        verify(cacheRepository).save(startsWith("ac_" + extractedUsername), anyString(), eq(1000L));
+        verify(responseHandler).responseBuilder(any(AccessTokenResponse.class), eq(AuthCodeEnum.LOGIN_SUCCESS.description()), eq(AuthCodeEnum.LOGIN_SUCCESS.code()));
+    }
+
+    @Test
     void testLogin_Failure_UserNotFound() throws BaseException {
         // Setup
         String requestVerificationToken = "dummyRVToken";
