@@ -117,10 +117,11 @@ class CredentialUserAuthenticationServiceImplTest {
 
 
     @Test
-    void testLogin_ResumesSession_WhenMatchingRvTokenPresented() throws BaseException {
-        // Setup - same browser re-opening after close: it still carries the rv_token that
-        // matches the surviving Redis session marker, so login should succeed (resume), not be rejected.
-        String requestVerificationToken = "existingRVToken";
+    void testLogin_TakesOverExistingSession() throws BaseException {
+        // Setup - a session already exists for this user (e.g. login from another device/browser).
+        // Last-login-wins: login should succeed and overwrite the session marker with a new token
+        // rather than being rejected, which invalidates the previous session.
+        String requestVerificationToken = "otherBrowserToken";
         CredentialUserLoginRequest loginRequest = new CredentialUserLoginRequest();
         loginRequest.setTenant("tenant1");
         loginRequest.setClientId("client123");
@@ -136,7 +137,6 @@ class CredentialUserAuthenticationServiceImplTest {
         doReturn(umsResponse).when(umsUserClient).getUserName(any(CredentialUserLoginRequest.class));
 
         when(cacheRepository.existsByUserId(extractedUsername)).thenReturn(true);
-        when(cacheRepository.findByKey("ac_" + extractedUsername)).thenReturn(requestVerificationToken);
 
         Map<String, String> mockAccessTokenMap = new HashMap<>();
         mockAccessTokenMap.put(ServiceConstants.TOKEN, "mockAccessToken");
@@ -155,41 +155,9 @@ class CredentialUserAuthenticationServiceImplTest {
         CommonNorthBoundResponse<AccessTokenResponse> response = spyService.login(requestVerificationToken, loginRequest);
 
         assertNotNull(response);
+        // A fresh verification token is written, overwriting the previous session's token.
         verify(cacheRepository).save(startsWith("ac_" + extractedUsername), anyString(), eq(1000L));
         verify(responseHandler).responseBuilder(any(AccessTokenResponse.class), eq(AuthCodeEnum.LOGIN_SUCCESS.description()), eq(AuthCodeEnum.LOGIN_SUCCESS.code()));
-    }
-
-    @Test
-    void testLogin_Rejected_WhenActiveSessionAndNoMatchingRvToken() throws BaseException {
-        // Setup - a different browser/device (no matching rv_token) tries to log in while a
-        // session is active. This must still be rejected as a concurrent login.
-        String requestVerificationToken = "otherBrowserToken";
-        CredentialUserLoginRequest loginRequest = new CredentialUserLoginRequest();
-        loginRequest.setTenant("tenant1");
-        loginRequest.setClientId("client123");
-
-        String rawUsername = "mockUser@email.com";
-        String extractedUsername = "mockUser";
-
-        CredentialUserAuthenticationServiceImpl spyService = Mockito.spy(
-                new CredentialUserAuthenticationServiceImpl(jwtService, cacheRepository, umsUserClient, responseHandler));
-
-        CommonSouthBoundResponse<String> umsResponse = new CommonSouthBoundResponse<>();
-        umsResponse.setResponseData(rawUsername);
-        doReturn(umsResponse).when(umsUserClient).getUserName(any(CredentialUserLoginRequest.class));
-
-        when(cacheRepository.existsByUserId(extractedUsername)).thenReturn(true);
-        when(cacheRepository.findByKey("ac_" + extractedUsername)).thenReturn("storedSessionToken");
-
-        ReflectionTestUtils.setField(spyService, "tempTokenPrefix", "temp_");
-        ReflectionTestUtils.setField(spyService, "prefixAC", "ac_");
-        ReflectionTestUtils.setField(spyService, "timeLimitAC", 1000L);
-
-        BaseException ex = assertThrows(BaseException.class, () ->
-                spyService.login(requestVerificationToken, loginRequest));
-        assertEquals(AuthCodeEnum.USER_ALREADY_LOGGED_IN.code(), ex.getResultCode());
-
-        verify(cacheRepository, never()).save(anyString(), anyString(), anyLong());
     }
 
     @Test

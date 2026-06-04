@@ -76,28 +76,12 @@ public class CredentialUserAuthenticationServiceImpl implements CredentialUserAu
             log.debug("{}|Extracted username: {}", LOG_PREFIX, userName);
 
             if (cacheRepository.existsByUserId(userName)) {
-                // A server-side session marker still exists. This is expected when the same browser
-                // re-opens after being closed: the in-memory access token is gone (so the UI shows the
-                // login page) but the persistent rv_token cookie - and this Redis marker - survive.
-                // Allow that same browser to resume by matching the rv_token it still carries; only reject
-                // genuinely concurrent logins coming from a different browser/device (no matching token).
-                String storedRequestVerificationToken = cacheRepository.findByKey(prefixAC + userName);
-                boolean sameBrowserSession = requestVerificationToken != null
-                        && !requestVerificationToken.isBlank()
-                        && requestVerificationToken.equals(storedRequestVerificationToken);
-
-                if (!sameBrowserSession) {
-                    log.warn("{}|{}|Login rejected - active session exists for userId: {}", LOG_PREFIX, ERROR, userName);
-                    throw new BaseException(
-                            AuthCodeEnum.USER_ALREADY_LOGGED_IN.description(),
-                            AuthCodeEnum.USER_ALREADY_LOGGED_IN.description(),
-                            HttpStatus.CONFLICT,
-                            AuthCodeEnum.USER_ALREADY_LOGGED_IN.code(),
-                            null
-                    );
-                }
-
-                log.info("{}|Resuming existing session for userId: {} - matching verification token presented", LOG_PREFIX, userName);
+                // Last-login-wins: a session already exists for this user (possibly on another device or
+                // browser). Take it over instead of rejecting. The new verification token saved below
+                // overwrites the previous one, so the previous session's rv_token cookie no longer matches
+                // and that device is rejected by JwtRequestFilter on its next request - i.e. it is
+                // automatically logged out.
+                log.info("{}|Existing session found for userId: {} - taking over and invalidating the previous session", LOG_PREFIX, userName);
             }
 
             Map<String, String> accessTokenMap = createAccessToken(userName, userLoginRequest.getTenant());

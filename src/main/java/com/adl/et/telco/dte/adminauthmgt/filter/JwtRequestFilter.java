@@ -119,12 +119,14 @@ public class JwtRequestFilter extends OncePerRequestFilter {
                     HttpStatus.FORBIDDEN, AuthCodeEnum.RV_TOKEN_MUST_NOT_BE_NULL.code(), null);
         }
 
-//        if (!jwtService.isValidRequestVerificationTokenUsingAccessToken(jwtToken, requestVerificationCookie.getValue())) {
-//            logger.error("Invalid RV Token");
-//            throw new BaseException(AuthCodeEnum.INVALID_RV_TOKEN.description(), AuthCodeEnum.INVALID_RV_TOKEN.description(),
-//                    HttpStatus.UNAUTHORIZED, AuthCodeEnum.INVALID_RV_TOKEN.code(), null);
-//
-//        }
+        // Enforce session ownership: the rv_token cookie must match the one currently stored for this
+        // user. When the user logs in again elsewhere, the stored token is rotated, so this (older)
+        // session's cookie no longer matches and is rejected here - automatically logging it out.
+        if (!jwtService.isValidRequestVerificationTokenUsingAccessToken(jwtToken, requestVerificationCookie.getValue())) {
+            logger.error("Invalid RV Token");
+            throw new BaseException(AuthCodeEnum.INVALID_RV_TOKEN.description(), AuthCodeEnum.INVALID_RV_TOKEN.description(),
+                    HttpStatus.UNAUTHORIZED, AuthCodeEnum.INVALID_RV_TOKEN.code(), null);
+        }
     }
 
     private void initialData(HttpServletRequest request) {
