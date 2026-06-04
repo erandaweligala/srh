@@ -1,0 +1,19 @@
+FROM 10.200.140.150:5000/java-build:21 as builder
+RUN java -version
+COPY . /tmp
+WORKDIR /tmp
+RUN mvn --settings settings.xml clean install -DskipTests ; test $? -eq 0 || exit 1
+
+FROM 10.200.140.150:5000/java-run:21
+RUN java -version ; mkdir -p /app /var/log/dte/ ; adduser -h /bin/bash -s /bin/bash -u 1100 --disabled-password dteuser
+# Set timezone to Colombo
+ENV TZ=Asia/Colombo
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+COPY --from=builder /tmp/target/quarkus-app/ /app/
+RUN mv /app/quarkus-run.jar /app/airtel-aaa-auth-management-service.jar
+COPY --from=builder /tmp/src/main/resources/* /app/
+RUN chown -R dteuser:dteuser /app /var/log/dte/
+RUN chmod -R 777 /var/log/dte/
+USER dteuser
+WORKDIR /home/dteuser
+ENV JAVA_OPTS=""
