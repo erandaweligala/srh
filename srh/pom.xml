@@ -37,6 +37,7 @@
         <log4j2.version>2.25.3</log4j2.version>
         <netty.version>4.1.129.Final</netty.version>
         <tomcat.version>10.1.19</tomcat.version>
+        <opensaml.version>4.1.1</opensaml.version>
     </properties>
 
     <build>
@@ -267,17 +268,17 @@
         <dependency>
             <groupId>org.opensaml</groupId>
             <artifactId>opensaml-core</artifactId>
-            <version>4.1.1</version>
+            <version>${opensaml.version}</version>
         </dependency>
         <dependency>
             <groupId>org.opensaml</groupId>
             <artifactId>opensaml-saml-api</artifactId>
-            <version>4.1.1</version>
+            <version>${opensaml.version}</version>
         </dependency>
         <dependency>
             <groupId>org.opensaml</groupId>
             <artifactId>opensaml-saml-impl</artifactId>
-            <version>4.1.1</version>
+            <version>${opensaml.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>javax.servlet</groupId>
@@ -288,6 +289,31 @@
                     <artifactId>servlet-api</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <!-- Declared directly: SamlResponseService imports these, and the build must not
+             rely on opensaml-saml-api's POM to bring them in transitively. -->
+        <dependency>
+            <groupId>org.opensaml</groupId>
+            <artifactId>opensaml-security-api</artifactId>
+            <version>${opensaml.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.opensaml</groupId>
+            <artifactId>opensaml-xmlsec-api</artifactId>
+            <version>${opensaml.version}</version>
+        </dependency>
+        <!-- Needed at runtime by SignatureValidator (signature validation provider and Signature unmarshaller). -->
+        <dependency>
+            <groupId>org.opensaml</groupId>
+            <artifactId>opensaml-security-impl</artifactId>
+            <version>${opensaml.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.opensaml</groupId>
+            <artifactId>opensaml-xmlsec-impl</artifactId>
+            <version>${opensaml.version}</version>
+            <scope>runtime</scope>
         </dependency>
 
 
